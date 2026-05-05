@@ -25,7 +25,7 @@ My research interests include computational mechanics, scientific machine learni
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><img src='images/publications/siam-news.png' alt="Digital twins of neurons publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Decoding the Neural Enigma: Digital Twins of Neurons Revolutionize Brain Research**
@@ -39,7 +39,7 @@ My research interests include computational mechanics, scientific machine learni
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CMAME 2025</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CMAME 2025</div><img src='images/publications/galds.png' alt="GALDS graph-autoencoder surrogate model thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **GALDS: A Graph-Autoencoder-Based Latent Dynamics Surrogate Model to Predict Neurite Material Transport**
@@ -53,7 +53,7 @@ My research interests include computational mechanics, scientific machine learni
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/publications/pinn-wbc.png' alt="PINN weak boundary conditions publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **A Multiscale Stabilized Physics-Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection-Dominated Flow**
@@ -67,7 +67,7 @@ My research interests include computational mechanics, scientific machine learni
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/publications/nn-fem.png' alt="Neural-network-enhanced FEM TPMS publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **An Efficient Parameterized Neural Network Enhanced Multiscale Finite Element Modeling for Triply Periodic Minimal Surface Meta-Structures and its Applications for Femur**
