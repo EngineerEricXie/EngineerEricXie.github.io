@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Tsung-Yeh Hsieh"
-  avatar           : "images/profile-web.jpg"
+  avatar           : "images/profile-avatar.jpg"
   bio              : "Ph.D. Student, Mechanical Engineering, Carnegie Mellon University"
   location         : "Pittsburgh, PA"
   employer         : "Carnegie Mellon University"
