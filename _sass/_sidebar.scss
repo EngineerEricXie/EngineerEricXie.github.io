@@ -92,11 +92,18 @@
   }
 
   img {
+    display: block;
+    width: 75px;
+    height: 75px;
     max-width: 175px;
     min-width: 75px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
 
     @include breakpoint($large) {
+      width: 175px;
+      height: 175px;
       padding: 5px;
       border: 1px solid $border-color;
     }

@@ -22,7 +22,35 @@ My research interests include computational mechanics, scientific machine learni
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/thumb-pinn-advection.svg' alt="Physics-informed neural network flow thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Decoding the Neural Enigma: Digital Twins of Neurons Revolutionize Brain Research**
+
+**T.Y. Hsieh**, A. Aldirany, J. Zhang
+
+*SIAM News*, 2026
+
+- Discussed digital twins of neurons and their role in computational brain research.
+- [[Article]](https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CMAME 2025</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**GALDS: A Graph-Autoencoder-Based Latent Dynamics Surrogate Model for Predicting Neurite Material Transport with 3D Isogeometric Analysis**
+
+A. Aldirany, **T.Y. Hsieh**, J. Zhang
+
+*Computer Methods in Applied Mechanics and Engineering*, 2025
+
+- Developed a graph-autoencoder-based latent dynamics surrogate model for neurite material transport prediction.
+- [[Paper]](https://doi.org/10.1016/j.cma.2025.118409)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **A Multiscale Stabilized Physics-Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection-Dominated Flow**
@@ -36,7 +64,7 @@ My research interests include computational mechanics, scientific machine learni
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/thumb-tpms-femur.svg' alt="TPMS multiscale finite element thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/500x300.png' alt="Publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **An Efficient Parameterized Neural Network Enhanced Multiscale Finite Element Modeling for Triply Periodic Minimal Surface Meta-Structures and its Applications for Femur**
