@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title desc">
+  <title id="title">TPMS multiscale finite element thumbnail</title>
+  <desc id="desc">A stylized TPMS lattice, neural surrogate model, and femur application for multiscale finite element modeling.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbf7"/>
+      <stop offset="0.5" stop-color="#e6f2ee"/>
+      <stop offset="1" stop-color="#f4e8db"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6d6b8"/>
+      <stop offset="1" stop-color="#d28f6a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#264653"/>
+    </marker>
+  </defs>
+  <rect width="500" height="300" rx="16" fill="url(#bg)"/>
+  <g transform="translate(38 46)" fill="none" stroke="#2f6f73" stroke-width="4" stroke-linecap="round">
+    <path d="M0 32 C35 -8 71 72 106 32 S177 -8 212 32"/>
+    <path d="M0 82 C35 42 71 122 106 82 S177 42 212 82"/>
+    <path d="M0 132 C35 92 71 172 106 132 S177 92 212 132"/>
+    <path d="M17 7 C57 45 -23 84 17 123 S57 201 17 239"/>
+    <path d="M80 7 C120 45 40 84 80 123 S120 201 80 239"/>
+    <path d="M143 7 C183 45 103 84 143 123 S183 201 143 239"/>
+    <path d="M206 7 C246 45 166 84 206 123 S246 201 206 239"/>
+  </g>
+  <g transform="translate(260 72)">
+    <rect x="0" y="0" width="102" height="126" rx="10" fill="#ffffff" stroke="#315f72" stroke-width="2"/>
+    <circle cx="26" cy="27" r="8" fill="#f4a261"/>
+    <circle cx="76" cy="27" r="8" fill="#e76f51"/>
+    <circle cx="26" cy="63" r="8" fill="#2a9d8f"/>
+    <circle cx="76" cy="63" r="8" fill="#3f88c5"/>
+    <circle cx="51" cy="101" r="9" fill="#264653"/>
+    <path d="M26 27 L76 63 M76 27 L26 63 M26 63 L51 101 M76 63 L51 101" stroke="#315f72" stroke-width="2"/>
+    <text x="17" y="150" fill="#23343b" font-family="Arial, sans-serif" font-size="17" font-weight="700">NN surrogate</text>
+  </g>
+  <g transform="translate(389 38)">
+    <path d="M46 13 C78 18 94 46 82 77 C75 94 60 101 57 120 C54 141 68 165 55 190 C44 210 21 208 16 189 C11 169 27 147 21 123 C16 101 0 85 4 61 C8 33 18 10 46 13Z" fill="url(#bone)" stroke="#8f5d4f" stroke-width="3"/>
+    <circle cx="45" cy="63" r="22" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
+    <path d="M31 118 C43 112 55 116 62 127" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
+  </g>
+  <path d="M225 154 L257 134" fill="none" stroke="#264653" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M365 134 L393 126" fill="none" stroke="#264653" stroke-width="3"/>
+  <text x="24" y="284" fill="#23343b" font-family="Arial, sans-serif" font-size="20" font-weight="700">NN-enhanced multiscale FEM for TPMS femur structures</text>
+</svg>

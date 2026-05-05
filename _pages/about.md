@@ -22,20 +22,21 @@ My research interests include computational mechanics, scientific machine learni
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/500x300.png' alt="Computational mechanics publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/thumb-pinn-advection.svg' alt="Physics-informed neural network flow thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**A Multiscale Stabilized Physics Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection Dominated Flow**
+**A Multiscale Stabilized Physics-Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection-Dominated Flow**
 
 **T.Y. Hsieh**, T.H. Huang
 
 *Engineering with Computers*, 2024
 
 - Developed a stabilized PINN formulation for advection-dominated flow problems with weak boundary-condition enforcement and transfer learning.
+- [[Paper]](https://link.springer.com/article/10.1007/s00366-024-01981-5)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/500x300.png' alt="Multiscale finite element publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/thumb-tpms-femur.svg' alt="TPMS multiscale finite element thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **An Efficient Parameterized Neural Network Enhanced Multiscale Finite Element Modeling for Triply Periodic Minimal Surface Meta-Structures and its Applications for Femur**
@@ -45,21 +46,11 @@ Y.Z. Chen, C.H. Wang, **T.Y. Hsieh**, C.C. Tung, P.Y. Chen, T.H. Huang
 *Journal of Materials Research and Technology*, 2024
 
 - Contributed to neural-network-enhanced multiscale finite element modeling for TPMS meta-structures and biomedical applications.
+- [[Paper]](https://www.sciencedirect.com/science/article/pii/S2238785424010639)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Preparation</div><img src='images/500x300.png' alt="Shock wave modeling publication thumbnail" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-**A Space-Time Neural Network Enhanced Meshfree Formulation for Shock Wave Modeling**
-
-**T.Y. Hsieh**, Y.M. Tsai, T.H. Huang
-
-In preparation
-
-- Developed a space-time neural-network-enhanced meshfree formulation for modeling shock waves and discontinuities.
-</div>
-</div>
+Full and automatically updated publication metrics are available on [Google Scholar](https://scholar.google.com.tw/citations?user=Wu0GDnwAAAAJ&hl=zh-TW).
 
 ## Conference Papers and Presentations
 - **A Space-Time Modularized Neural Network Approach for Shock Wave Modeling**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference, Chicago, Illinois, May 2024.
