@@ -3,56 +3,90 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am **Tsung-Yeh Hsieh**, a Ph.D. student in **Mechanical Engineering at Carnegie Mellon University**, working in the **Computational Bio-Modeling Lab** advised by **Prof. Jessica Zhang**.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
+My research interests include computational mechanics, scientific machine learning, numerical analysis, high-performance CPU/GPU computing, multiscale modeling, meshfree methods, and numerical methods in autonomy. Before joining CMU, I received my M.S. and B.S. degrees from **National Tsing Hua University**, where I worked on physics-informed neural networks, meshfree methods, reduced-order modeling, and multiscale material simulation.
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2026.05*: &nbsp;Launched this academic homepage using the AcadHomepage template.
+- *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
+- *2024.05*: &nbsp;Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference in Chicago.
+- *2023.10*: &nbsp;Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.
 
-# 📝 Publications 
+# 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/500x300.png' alt="Computational mechanics publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+**A Multiscale Stabilized Physics Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection Dominated Flow**
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**T.Y. Hsieh**, T.H. Huang
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+*Engineering with Computers*, 2024
+
+- Developed a stabilized PINN formulation for advection-dominated flow problems with weak boundary-condition enforcement and transfer learning.
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/500x300.png' alt="Multiscale finite element publication thumbnail" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**An Efficient Parameterized Neural Network Enhanced Multiscale Finite Element Modeling for Triply Periodic Minimal Surface Meta-Structures and its Applications for Femur**
+
+Y.Z. Chen, C.H. Wang, **T.Y. Hsieh**, C.C. Tung, P.Y. Chen, T.H. Huang
+
+*Journal of Materials Research and Technology*, 2024
+
+- Contributed to neural-network-enhanced multiscale finite element modeling for TPMS meta-structures and biomedical applications.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Preparation</div><img src='images/500x300.png' alt="Shock wave modeling publication thumbnail" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**A Space-Time Neural Network Enhanced Meshfree Formulation for Shock Wave Modeling**
+
+**T.Y. Hsieh**, Y.M. Tsai, T.H. Huang
+
+In preparation
+
+- Developed a space-time neural-network-enhanced meshfree formulation for modeling shock waves and discontinuities.
+</div>
+</div>
+
+## Conference Papers and Presentations
+- **A Space-Time Modularized Neural Network Approach for Shock Wave Modeling**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference, Chicago, Illinois, May 2024.
+- **Shock Wave Modeling with Enhanced Physics-Informed Neural Networks**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Conference on Theoretical and Applied Mechanics, Yunlin, Taiwan, Nov. 2023.
+- **An Enhanced Physics Informed Neural Networks for Shock Wave Modeling**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Association of Computational Mechanics Taiwan Annual Meeting, Keelung, Taiwan, Oct. 2023.
+- **A Neural Network Enhanced Finite Element Method for TPMS Based Mechanical Metamaterials Simulation**, Y.Z. Chen, **T.Y. Hsieh**, T.H. Huang, C.C. Tung, P.Y. Chen. Oral presentation, WCCM/APCOM, Yokohama, Japan, 2022.
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2023.10*: Third Place Award, Student Paper Competition, NCFD Conference, Taiwan.
+- *2022.12*: Top Quarter Award, AI Cup Competition, Ministry of Education, Taiwan.
+- *2022.12*: Honorable Mention Award, Student Poster Competition, TSFD Conference, Taiwan.
+- *2020.12*: Honorable Mention Award, Capstone Project Competition, PME Department, NTHU, Taiwan.
+- *2019.08*: 9th Place Award, Formula SAE Japan, SAE International, as a team award.
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# 📖 Education
+- *2024 - Present*: Ph.D. in Mechanical Engineering, Carnegie Mellon University. Computational Bio-Modeling Lab, advisor: Prof. Jessica Zhang.
+- *2021 - 2023*: M.S. in Power Mechanical Engineering, National Tsing Hua University. GPA: 4.08/4.3. Advisor: Prof. Tsung-Hui (Alex) Huang.
+- *2017 - 2021*: B.S. in Power Mechanical Engineering, National Tsing Hua University. Electrical and Control Division, advisor: Prof. J. Andrew Yeh.
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+# 🔬 Projects
+- **Machine Learning for Computational Fluid Mechanics involving Strong Advection and Discontinuity**: Developed advanced PINN methods for CFD, including weakly imposed boundary conditions, multiscale loss functions, modular shock-capturing networks, and GPU/CPU-parallelized meshfree solvers.
+- **Physics-Informed Neural Network Approach for Anomaly Detection in Structural Problems**: Implemented hybrid constitutive artificial neural networks and damage-based neural networks for crack detection and anomaly detection in hyperelastic materials.
+- **Reduced-Order Modeling for Machine-Learning-Controlled PDEs**: Integrated differentiable physical simulation with neural-network control for soft robotics and applied POD to structural mechanics problems.
+- **Multiscale Porous and Composite Materials**: Collaborated with materials science researchers on neural-network-based multiscale homogenization and micro-to-macro fracture and damage projection.
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 💻 Experience and Skills
+- *2017 - 2024*: Research Assistant, National Tsing Hua University. Managed and participated in interdisciplinary research projects and helped maintain Linux and Windows research servers.
+- *2022*: Teaching Assistant, Mechanics of Materials. Served as TA team leader; student rating: 4.9/5.0.
+- *2020 Season*: Head of Power Mechanical Group, NTHU Racing Team. Led electric race car reducer, timing system, and high-voltage charger projects.
+- **Programming and Tools**: Python, MATLAB, C/C++, Java, FEniCS, Docker, Git, Arduino, STM32, ANSYS, Inventor, SolidWorks, ADAMS, and ParaView.
