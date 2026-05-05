@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Tsung-Yeh Hsieh**, a Ph.D. student in **Mechanical Engineering at Carnegie Mellon University**, working in the **Computational Bio-Modeling Lab** advised by **Prof. Jessica Zhang**.
+I am **Tsung-Yeh Hsieh**, a Ph.D. student in **[Mechanical Engineering](https://www.meche.engineering.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/)**, working in the **[Computational Bio-Modeling Lab](https://www.meche.engineering.cmu.edu/faculty/zhang-computational-bio-modeling-lab.html)** advised by **[Prof. Jessica Zhang](https://www.andrew.cmu.edu/user/jessicaz/)**.
 
 My research interests include computational mechanics, scientific machine learning, numerical analysis, high-performance CPU/GPU computing, multiscale modeling, meshfree methods, and numerical methods in autonomy. Before joining CMU, I received my M.S. and B.S. degrees from **National Tsing Hua University**, where I worked on physics-informed neural networks, meshfree methods, reduced-order modeling, and multiscale material simulation.
 
@@ -94,7 +94,7 @@ Full and automatically updated publication metrics are available on [Google Scho
 - *2019.08*: 9th Place Award, Formula SAE Japan, SAE International, as a team award.
 
 # 📖 Education
-- *2024 - Present*: Ph.D. in Mechanical Engineering, Carnegie Mellon University. Computational Bio-Modeling Lab, advisor: Prof. Jessica Zhang.
+- *2024 - Present*: Ph.D. in [Mechanical Engineering](https://www.meche.engineering.cmu.edu/), [Carnegie Mellon University](https://www.cmu.edu/). [Computational Bio-Modeling Lab](https://www.meche.engineering.cmu.edu/faculty/zhang-computational-bio-modeling-lab.html), advisor: [Prof. Jessica Zhang](https://www.andrew.cmu.edu/user/jessicaz/).
 - *2021 - 2023*: M.S. in Power Mechanical Engineering, National Tsing Hua University. GPA: 4.08/4.3. Advisor: Prof. Tsung-Hui (Alex) Huang.
 - *2017 - 2021*: B.S. in Power Mechanical Engineering, National Tsing Hua University. Electrical and Control Division, advisor: Prof. J. Andrew Yeh.
 
