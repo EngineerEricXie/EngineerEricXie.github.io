@@ -15,6 +15,7 @@ I am **Tsung-Yeh Hsieh**, a Ph.D. student in **[Mechanical Engineering](https://
 My research interests include computational mechanics, scientific machine learning, AI for science, AI for PDEs, numerical analysis, multiscale modeling, and meshfree methods. Before joining CMU, I received my M.S. and B.S. degrees from **National Tsing Hua University**, where I worked on physics-informed neural networks, reduced-order modeling, and multiscale material simulation.
 
 # 🔥 News
+- *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
 - *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
 - *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
 - *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
@@ -24,6 +25,19 @@ My research interests include computational mechanics, scientific machine learni
 - *2023.07*: &nbsp;Presented numerically enhanced PINN work at the 17th U.S. National Congress on Computational Mechanics in Albuquerque, New Mexico.
 
 # 📝 Publications
+
+<div class='paper-box'><div class='paper-box-text' markdown="1">
+
+**Predicting Macroscopic Axon Topology from Microscopic Kinematics: An Interactive Tracking and Random Walk Pipeline for Substrate-Dependent Cortical Neurospheres**
+
+C. Kim, M. Kim, H. Cao, **T.Y. Hsieh**, Y.J. Zhang, T. Cohen-Karni, V. Webster-Wood
+
+*bioRxiv*, 2026
+
+- Developed an interactive tracking and biased-random-walk framework linking single-axon growth kinematics to macroscopic network topology in cortical neurospheres.
+- [[Preprint]](https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1) · [[DOI]](https://doi.org/10.64898/2026.07.30.741748)
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><img src='images/publications/siam-news.png' alt="Digital twins of neurons publication thumbnail" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
