@@ -26,7 +26,8 @@ My research interests include computational mechanics, scientific machine learni
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">bioRxiv 2026</div><img src='images/publications/axon-topology.png' alt="Experimental validation of simulated cortical neurosphere axon topology" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 **Predicting Macroscopic Axon Topology from Microscopic Kinematics: An Interactive Tracking and Random Walk Pipeline for Substrate-Dependent Cortical Neurospheres**
 
