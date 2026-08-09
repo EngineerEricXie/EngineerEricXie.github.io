@@ -20,6 +20,16 @@ I build AI systems for physical and biological problems, with a focus on graph n
 2. **AI Agents for Scientific Computing** — Agents that automate simulation setup, execution, validation, analysis, and iteration.
 3. **Scalable Scientific Computing** — GPU and parallel simulation tools that provide training data and physical foundations for AI-for-science systems.
 
+# ⚡ Featured Engineering Project
+
+## [GPU-Accelerated IGA for Flow and Transport](https://github.com/EngineerEricXie/TubularFlowIGA)
+
+Built a validated C++/CUDA simulation pipeline for flow and transport in complex branching geometries. The system provides scalable, physics-grounded data generation for scientific machine learning and digital-twin applications.
+
+**Impact:** reported benchmarks show **up to 16.6× faster computation**, **77.5% lower memory use**, and a **2.02× GPU speedup**.
+
+[Repository](https://github.com/EngineerEricXie/TubularFlowIGA) · [Benchmark details](https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/BENCHMARKS.md)
+
 # 🔥 News
 - *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
 - *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
@@ -133,7 +143,6 @@ Full and automatically updated publication metrics are available on [Google Scho
 - **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
 - **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
 - **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
-- **GPU-Accelerated Simulation and Digital Twins**: Built IGA/FEM and CT-to-mesh workflows for biomedical simulation; reported benchmarks include **up to 16.6× faster computation**, **77.5% less memory use**, and a **2.02× GPU speedup**.
 - **AI for Materials and Structures**: Developed neural constitutive models, anomaly-detection methods, and multiscale surrogate models for structural and material systems.
 
 # 💻 Experience and Skills
