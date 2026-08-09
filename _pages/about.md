@@ -14,6 +14,26 @@ I am **Tsung-Yeh Hsieh**, a Ph.D. student in **[Mechanical Engineering](https://
 
 I build AI systems for physical and biological problems, with a focus on graph neural networks, Neural ODEs, transformers, physics-informed learning, AI agents, and GPU-accelerated simulation. Before joining CMU, I received my M.S. and B.S. degrees from **National Tsing Hua University**.
 
+<span class='anchor' id='news'></span>
+
+# 🔥 News
+- *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
+- *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
+- *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
+
+<details>
+<summary><strong>Older news</strong></summary>
+<div markdown="1">
+
+- *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
+- *2024.05*: &nbsp;Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference in Chicago.
+- *2023.10*: &nbsp;Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.
+- *2023.08*: &nbsp;Presented advection-dominated flow modeling work at the 28th National Computational Fluid Dynamics Conference in Taipei, Taiwan.
+- *2023.07*: &nbsp;Presented numerically enhanced PINN work at the 17th U.S. National Congress on Computational Mechanics in Albuquerque, New Mexico.
+
+</div>
+</details>
+
 <span class='anchor' id='research'></span>
 
 # 🤖 Current Research
@@ -156,24 +176,12 @@ Full and automatically updated publication metrics are available on [Google Scho
 - *2020.12*: Honorable Mention Award, Capstone Project Competition, PME Department, NTHU, Taiwan.
 - *2019.08*: 9th Place Award, Formula SAE Japan, SAE International, as a team award.
 
-<span class='anchor' id='news'></span>
+<span class='anchor' id='presentations'></span>
 
-# 🔥 News
-- *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
-- *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
-- *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
-- *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
-- *2024.05*: &nbsp;Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference in Chicago.
-- *2023.10*: &nbsp;Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.
-- *2023.08*: &nbsp;Presented advection-dominated flow modeling work at the 28th National Computational Fluid Dynamics Conference in Taipei, Taiwan.
-- *2023.07*: &nbsp;Presented numerically enhanced PINN work at the 17th U.S. National Congress on Computational Mechanics in Albuquerque, New Mexico.
-
-<span class='anchor' id='conferences'></span>
-
-# 🎤 Conference Archive
+# 🎤 Academic Presentations
 
 <details>
-<summary><strong>View conference papers and presentations</strong></summary>
+<summary><strong>View academic presentations</strong></summary>
 <div markdown="1">
 
 - **A Multi-Dimensional Framework for Efficient Material Transport Simulation in Complex Neurite Network Using Autoencoder-Based Surrogate Models**, **T.Y. Hsieh**, Y.J. Zhang. 18th U.S. National Congress on Computational Mechanics, Chicago, Illinois, Jul. 2025.
