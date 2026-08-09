@@ -40,6 +40,11 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
 .paper-box {
     display: flex;
     justify-content: left;
