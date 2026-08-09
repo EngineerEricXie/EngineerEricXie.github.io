@@ -14,11 +14,15 @@ I am **Tsung-Yeh Hsieh**, a Ph.D. student in **[Mechanical Engineering](https://
 
 I build AI systems for physical and biological problems, with a focus on graph neural networks, Neural ODEs, transformers, physics-informed learning, AI agents, and GPU-accelerated simulation. Before joining CMU, I received my M.S. and B.S. degrees from **National Tsing Hua University**.
 
+<span class='anchor' id='research'></span>
+
 # 🤖 Current Research
 
 1. **Machine Learning for Physical Systems** — Graph neural networks, Neural ODEs, transformers, PINNs, and surrogate models for learning complex dynamics.
 2. **AI Agents for Scientific Computing** — Agents that automate simulation setup, execution, validation, analysis, and iteration.
 3. **Scalable Scientific Computing** — GPU and parallel simulation tools that provide training data and physical foundations for AI-for-science systems.
+
+<span class='anchor' id='featured-project'></span>
 
 # ⚡ Featured Engineering Project
 
@@ -30,15 +34,7 @@ Built a validated C++/CUDA simulation pipeline for flow and transport in complex
 
 [Repository](https://github.com/EngineerEricXie/TubularFlowIGA) · [Benchmark details](https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/BENCHMARKS.md)
 
-# 🔥 News
-- *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
-- *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
-- *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
-- *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
-- *2024.05*: &nbsp;Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference in Chicago.
-- *2023.10*: &nbsp;Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.
-- *2023.08*: &nbsp;Presented advection-dominated flow modeling work at the 28th National Computational Fluid Dynamics Conference in Taipei, Taiwan.
-- *2023.07*: &nbsp;Presented numerically enhanced PINN work at the 17th U.S. National Congress on Computational Mechanics in Albuquerque, New Mexico.
+<span class='anchor' id='publications'></span>
 
 # 📝 Publications
 
@@ -115,7 +111,71 @@ Y.Z. Chen, C.H. Wang, **T.Y. Hsieh**, C.C. Tung, P.Y. Chen, T.H. Huang
 
 Full and automatically updated publication metrics are available on [Google Scholar](https://scholar.google.com.tw/citations?user=Wu0GDnwAAAAJ&hl=zh-TW).
 
-## Conference Papers and Presentations
+<span class='anchor' id='projects'></span>
+
+# 🔬 Selected Projects
+- **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
+- **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
+- **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
+- **AI for Materials and Structures**: Developed neural constitutive models, anomaly-detection methods, and multiscale surrogate models for structural and material systems.
+
+<span class='anchor' id='experience'></span>
+
+# 💼 Experience
+- *2017 - 2024*: Research Assistant, National Tsing Hua University. Managed and participated in interdisciplinary research projects and helped maintain Linux and Windows research servers.
+- *2022*: Teaching Assistant, Mechanics of Materials. Served as TA team leader; student rating: 4.9/5.0.
+- *2020 Season*: Head of Power Mechanical Group, NTHU Racing Team. Led electric race car reducer, timing system, and high-voltage charger projects.
+
+<span class='anchor' id='skills'></span>
+
+# 🧰 Technical Skills
+- **Machine Learning:** Python, PyTorch, JAX, graph neural networks, Neural ODEs, transformers, and physics-informed neural networks.
+- **Scientific Computing:** C/C++, CUDA, MPI, PETSc, FEniCS, numerical methods, and high-performance computing.
+- **Tools and Visualization:** Docker, Git, Linux, and ParaView.
+
+<span class='anchor' id='academic-service'></span>
+
+# 🤝 Academic Service
+- Journal Reviewer, *Computer Aided Geometric Design (CAGD)*.
+- Journal Reviewer, *Engineering with Computers (EWCO)*.
+
+<span class='anchor' id='education'></span>
+
+# 📖 Education
+- *2024 - Present*: Ph.D. in Mechanical Engineering, Carnegie Mellon University. Computational Bio-Modeling Lab, advisor: Prof. Jessica Zhang.
+- *2021 - 2023*: M.S. in Power Mechanical Engineering, National Tsing Hua University. GPA: 4.08/4.3. Advisor: Prof. Tsung-Hui (Alex) Huang.
+- *2017 - 2021*: B.S. in Power Mechanical Engineering, National Tsing Hua University. Electrical and Control Division, advisor: Prof. J. Andrew Yeh.
+
+<span class='anchor' id='honors'></span>
+
+# 🎖 Honors and Awards
+- *2025.07*: Travel Award, 18th U.S. National Congress on Computational Mechanics, Chicago, Illinois.
+- *2023.10*: Third Place Award, Student Paper Competition, NCFD Conference, Taiwan.
+- *2022.12*: Top Quarter Award, AI Cup Competition, Ministry of Education, Taiwan.
+- *2022.12*: Honorable Mention Award, Student Poster Competition, TSFD Conference, Taiwan.
+- *2020.12*: Honorable Mention Award, Capstone Project Competition, PME Department, NTHU, Taiwan.
+- *2019.08*: 9th Place Award, Formula SAE Japan, SAE International, as a team award.
+
+<span class='anchor' id='news'></span>
+
+# 🔥 News
+- *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
+- *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
+- *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
+- *2024.08*: &nbsp;Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.
+- *2024.05*: &nbsp;Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference in Chicago.
+- *2023.10*: &nbsp;Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.
+- *2023.08*: &nbsp;Presented advection-dominated flow modeling work at the 28th National Computational Fluid Dynamics Conference in Taipei, Taiwan.
+- *2023.07*: &nbsp;Presented numerically enhanced PINN work at the 17th U.S. National Congress on Computational Mechanics in Albuquerque, New Mexico.
+
+<span class='anchor' id='conferences'></span>
+
+# 🎤 Conference Archive
+
+<details>
+<summary><strong>View conference papers and presentations</strong></summary>
+<div markdown="1">
+
 - **A Multi-Dimensional Framework for Efficient Material Transport Simulation in Complex Neurite Network Using Autoencoder-Based Surrogate Models**, **T.Y. Hsieh**, Y.J. Zhang. 18th U.S. National Congress on Computational Mechanics, Chicago, Illinois, Jul. 2025.
 - **A Space-Time Modularized Neural Network Approach for Shock Wave Modeling**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability Conference, Chicago, Illinois, May 2024.
 - **Shock Wave Modeling with Enhanced Physics-Informed Neural Networks**, **T.Y. Hsieh**, Y.M. Tsai, T.H. Huang. Oral presentation, Conference on Theoretical and Applied Mechanics, Yunlin, Taiwan, Nov. 2023.
@@ -126,27 +186,5 @@ Full and automatically updated publication metrics are available on [Google Scho
 - **A Neural Network Enhanced Finite Element Method for TPMS Based Mechanical Metamaterials Simulation**, Y.Z. Chen, **T.Y. Hsieh**, T.H. Huang, C.C. Tung, P.Y. Chen. Oral presentation, WCCM/APCOM, Yokohama, Japan, Jul.-Aug. 2022.
 - **Deep Energy Method: A Neural Network Based Meshfree Solver for Hyperelastic Material**, **T.Y. Hsieh**, T.H. Huang. Oral presentation, Conference on Theoretical and Applied Mechanics, virtual format, Nov. 2021.
 
-# 🎖 Honors and Awards
-- *2025.07*: Travel Award, 18th U.S. National Congress on Computational Mechanics, Chicago, Illinois.
-- *2023.10*: Third Place Award, Student Paper Competition, NCFD Conference, Taiwan.
-- *2022.12*: Top Quarter Award, AI Cup Competition, Ministry of Education, Taiwan.
-- *2022.12*: Honorable Mention Award, Student Poster Competition, TSFD Conference, Taiwan.
-- *2020.12*: Honorable Mention Award, Capstone Project Competition, PME Department, NTHU, Taiwan.
-- *2019.08*: 9th Place Award, Formula SAE Japan, SAE International, as a team award.
-
-# 📖 Education
-- *2024 - Present*: Ph.D. in Mechanical Engineering, Carnegie Mellon University. Computational Bio-Modeling Lab, advisor: Prof. Jessica Zhang.
-- *2021 - 2023*: M.S. in Power Mechanical Engineering, National Tsing Hua University. GPA: 4.08/4.3. Advisor: Prof. Tsung-Hui (Alex) Huang.
-- *2017 - 2021*: B.S. in Power Mechanical Engineering, National Tsing Hua University. Electrical and Control Division, advisor: Prof. J. Andrew Yeh.
-
-# 🔬 Selected Projects
-- **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
-- **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
-- **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
-- **AI for Materials and Structures**: Developed neural constitutive models, anomaly-detection methods, and multiscale surrogate models for structural and material systems.
-
-# 💻 Experience and Skills
-- *2017 - 2024*: Research Assistant, National Tsing Hua University. Managed and participated in interdisciplinary research projects and helped maintain Linux and Windows research servers.
-- *2022*: Teaching Assistant, Mechanics of Materials. Served as TA team leader; student rating: 4.9/5.0.
-- *2020 Season*: Head of Power Mechanical Group, NTHU Racing Team. Led electric race car reducer, timing system, and high-voltage charger projects.
-- **AI and Scientific Computing**: Python, PyTorch, JAX, graph neural networks, Neural ODEs, transformers, PINNs, C/C++, CUDA, MPI/PETSc, FEniCS, Docker, Git, and ParaView.
+</div>
+</details>
