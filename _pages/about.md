@@ -50,7 +50,15 @@ I build AI systems for physical and biological problems, with a focus on graph n
 
 Built a validated C++/CUDA simulation pipeline for flow and transport in complex branching geometries. The system provides scalable, physics-grounded data generation for scientific machine learning and digital-twin applications.
 
-**Impact:** reported benchmarks show **up to 16.6× faster computation**, **77.5% lower memory use**, and a **2.02× GPU speedup**.
+**Performance highlights:** across three branching-neuron cases, the V100 backend completed the reported end-to-end runs in **7.87–78.52 s** and was **36.0×–154.5× faster** than the legacy NeuronTransportIGA CPU implementation.
+
+| Case | Nodes / elements | Legacy CPU | HexSim CPU | TubularFlowIGA CPU | TubularFlowIGA V100 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| bifurcation | 14,565 / 12,780 | 442.68 s | 71.98 s | 26.75 s | **7.87 s** |
+| NMO_54499_shrink | 16,344 / 14,040 | 589.32 s | 69.61 s | 33.03 s | **16.39 s** |
+| NMO_66748_subtree | 57,456 / 50,940 | 12,127.80 s | 137.36 s | 98.77 s | **78.52 s** |
+
+*Runtimes are case- and hardware-specific; see the benchmark documentation for validation and scope.*
 
 [Repository](https://github.com/EngineerEricXie/TubularFlowIGA) · [Benchmark details](https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/BENCHMARKS.md)
 
