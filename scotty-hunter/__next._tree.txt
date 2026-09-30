@@ -1,2 +1,2 @@
-:HL["/scotty-hunter/_next/static/css/a56044408486e302.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"OaNJ7MabEBdYMbIKbFCfb"}
+:HL["/scotty-hunter/_next/static/css/b22a2e3911d33b03.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"dp3VpyHYvM7c9W6SwWA2o"}
