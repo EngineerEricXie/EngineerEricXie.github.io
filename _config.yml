@@ -65,6 +65,10 @@ include:
   - .htaccess
   - _pages
   - files
+  # Static Next.js app assets and RSC navigation payloads
+  - _next
+  - "__next*"
+  - _not-found
 exclude:
   - docs
   - google_scholar_crawler

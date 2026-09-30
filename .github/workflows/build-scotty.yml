@@ -1,0 +1,50 @@
+name: Prepare ScottyBites static publication
+on:
+  push:
+    branches: ["publish/scotty-*"]
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out homepage staging branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Check out reviewed ScottyBites source
+        uses: actions/checkout@v4
+        with:
+          repository: EngineerEricXie/scotty-hunter
+          ref: dff74508cc1c1f6c70f900bc237e6cc32b806164
+          path: .scotty-source
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .scotty-source/package-lock.json
+      - name: Build reviewed static demo
+        working-directory: .scotty-source
+        run: npm ci && npm run build:pages
+        env:
+          NEXT_PUBLIC_BASE_PATH: /scotty-hunter
+      - name: Stage generated app only
+        run: |
+          mkdir -p scotty-hunter
+          rsync -a --delete --exclude=.nojekyll .scotty-source/out/ scotty-hunter/
+          printf '%s\n' '{"source_repository":"https://github.com/EngineerEricXie/scotty-hunter","source_commit":"dff74508cc1c1f6c70f900bc237e6cc32b806164","mode":"static-demo"}' > scotty-hunter/deployment.json
+          test -f scotty-hunter/index.html
+          test -d scotty-hunter/_next
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scotty-hunter
+          if ! git diff --cached --quiet; then
+            git commit -m "Build reviewed ScottyBites static demo for homepage"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+      - name: Report staged commit
+        run: |
+          git rev-parse HEAD
+          echo 'Generated app is staged. Publish by reviewing and fast-forwarding the homepage main branch.' >> "$GITHUB_STEP_SUMMARY"

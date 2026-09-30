@@ -142,6 +142,8 @@ Full and automatically updated publication metrics are available on [Google Scho
 <span class='anchor' id='projects'></span>
 
 # 🔬 Selected Projects
+
+- **[ScottyBites · CMU Free-Food Companion](/scotty-hunter/)**: A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders, and a playful Scotty companion. [Try the interactive demo](/scotty-hunter/) · [Source code](https://github.com/EngineerEricXie/scotty-hunter). The demo uses sample events and stores plans locally in your browser.
 - **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
 - **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
 - **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
