@@ -137,7 +137,7 @@ Y.Z. Chen, C.H. Wang, **T.Y. Hsieh**, C.C. Tung, P.Y. Chen, T.H. Huang
 </div>
 </div>
 
-Full and automatically updated publication metrics are available on [Google Scholar](https://scholar.google.com.tw/citations?user=Wu0GDnwAAAAJ&hl=zh-TW).
+The full publication list is available on [Google Scholar](https://scholar.google.com.tw/citations?user=Wu0GDnwAAAAJ&hl=zh-TW).
 
 <span class='anchor' id='projects'></span>
 
