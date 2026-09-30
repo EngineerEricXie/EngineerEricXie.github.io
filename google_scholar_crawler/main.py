@@ -1,5 +1,6 @@
 from scholarly import scholarly
 import json
+import logging
 from datetime import datetime
 import os
 from pathlib import Path
@@ -47,4 +48,5 @@ def main():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
     main()

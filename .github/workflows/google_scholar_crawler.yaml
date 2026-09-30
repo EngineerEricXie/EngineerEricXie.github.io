@@ -44,7 +44,8 @@ jobs:
       # Fork/Dependabot PRs have no Actions secrets and run only offline tests.
       - name: Fetch citation data
         if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')
-        run: python main.py
+        timeout-minutes: 3
+        run: python -u main.py
         env:
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
       - name: Stage verified citation data

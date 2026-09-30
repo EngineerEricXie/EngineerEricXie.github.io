@@ -18,7 +18,8 @@ For a live check, run `python main.py`. The crawler reads the profile ID from
 an absent or empty secret uses the public URL already configured on the site.
 A successful run writes both JSON files under `results/`.
 Google Scholar network failures remain visible as failures; existing published
-data is left intact if the fetch fails.
+data is left intact if the fetch fails. The live-fetch step is capped at three
+minutes and logs request failures to make upstream connectivity problems clear.
 
 The Actions workflow runs daily at 08:00 UTC, after a Pages build, and manually
 via **Run workflow**. Same-repository pull requests also run the live crawler,
