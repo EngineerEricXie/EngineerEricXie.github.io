@@ -17,6 +17,30 @@ from scholarly import scholarly
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / "main.py"
+resolve_scholar_id = runpy.run_path(str(SCRIPT))["resolve_scholar_id"]
+
+
+class ProfileConfigurationTests(unittest.TestCase):
+    def test_explicit_id_takes_precedence(self):
+        with patch.dict(os.environ, {"GOOGLE_SCHOLAR_ID": " explicit-id "}):
+            self.assertEqual(resolve_scholar_id("missing-config.yml"), "explicit-id")
+
+    def test_empty_secret_uses_public_profile_url(self):
+        with tempfile.TemporaryDirectory() as directory:
+            config = Path(directory) / "_config.yml"
+            config.write_text(
+                'author:\n  googlescholar: "https://scholar.google.com.tw/citations?user=public-id&hl=zh-TW"\n'
+            )
+            with patch.dict(os.environ, {"GOOGLE_SCHOLAR_ID": "  "}):
+                self.assertEqual(resolve_scholar_id(config), "public-id")
+
+    def test_missing_profile_reports_configuration_error(self):
+        with tempfile.TemporaryDirectory() as directory:
+            config = Path(directory) / "_config.yml"
+            config.write_text('author:\n  googlescholar: ""\n')
+            with patch.dict(os.environ, {"GOOGLE_SCHOLAR_ID": ""}):
+                with self.assertRaisesRegex(ValueError, "author.googlescholar"):
+                    resolve_scholar_id(config)
 
 
 class DependencyCompatibilityTests(unittest.TestCase):

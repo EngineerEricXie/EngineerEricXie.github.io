@@ -9,6 +9,7 @@ on:
     paths:
       - '.github/workflows/google_scholar_crawler.yaml'
       - 'google_scholar_crawler/**'
+      - '_config.yml'
 
 permissions:
   contents: read
@@ -43,12 +44,7 @@ jobs:
       # Fork/Dependabot PRs have no Actions secrets and run only offline tests.
       - name: Fetch citation data
         if: github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')
-        run: |
-          if [ -z "$GOOGLE_SCHOLAR_ID" ]; then
-            echo '::error::Set the GOOGLE_SCHOLAR_ID repository secret to your Google Scholar profile ID.'
-            exit 1
-          fi
-          python main.py
+        run: python main.py
         env:
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
       - name: Stage verified citation data
