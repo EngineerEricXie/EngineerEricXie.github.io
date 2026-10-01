@@ -17,6 +17,7 @@ I build AI systems for physical and biological problems, with a focus on graph n
 <span class='anchor' id='news'></span>
 
 # 🔥 News
+- *2026.09*: &nbsp;Released [MGRD](https://arxiv.org/abs/2609.23990), an arXiv preprint on compact, variance-aware neurite forecasting across simulation and microscopy data.
 - *2026.07*: &nbsp;Co-authored a bioRxiv preprint on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.
 - *2025.09*: &nbsp;Passed the Ph.D. qualifying exam at Carnegie Mellon University.
 - *2025.07*: &nbsp;Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.
@@ -65,6 +66,23 @@ Built a validated C++/CUDA simulation pipeline for flow and transport in complex
 <span class='anchor' id='publications'></span>
 
 # 📝 Publications
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><a href="https://arxiv.org/html/2609.23990v1#S2.F1"><img src='images/publications/mgrd.png' alt="MGRD workflow: morphology conditioning, residual diffusion, gated denoising, and probabilistic neurite forecasts" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
+
+**MGRD: Compact morphology-gated residual diffusion for variance-aware cross-domain neurite forecasting**
+
+**T.Y. Hsieh**, C. Anitescu, C. Kim, V.A. Webster-Wood, Y.J. Zhang
+
+*arXiv preprint*, 2026
+
+- Forecasts 20 future neurite-morphology frames from 10 observations, with repeated sampling to estimate forecast variability.
+- Reduced trajectory-wise mean MAE by **39.6%** and improved skeleton F1 by **45.3%** over gSTA on human iPSC-derived neuron microscopy, using **1.01%** of its parameters.
+- [[Preprint]](https://arxiv.org/abs/2609.23990) · [[PDF]](https://arxiv.org/pdf/2609.23990)
+
+<small>Figure 1 from the preprint, <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</small>
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">bioRxiv 2026</div><img src='images/publications/axon-topology.png' alt="Experimental validation of simulated cortical neurosphere axon topology" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
