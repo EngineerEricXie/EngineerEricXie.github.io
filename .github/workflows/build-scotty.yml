@@ -39,7 +39,12 @@ jobs:
           test -d scotty-hunter/_next
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          test -f scotty-hunter/vendor/maplibre/maplibre-gl-worker.mjs
+          test -f scotty-hunter/vendor/maplibre/maplibre-gl-shared.mjs
           git add scotty-hunter
+          # The homepage ignores vendor/ for Ruby dependencies; these three public
+          # MapLibre assets are intentionally shipped with the static app.
+          git add -f scotty-hunter/vendor/maplibre/maplibre-gl-worker.mjs scotty-hunter/vendor/maplibre/maplibre-gl-shared.mjs scotty-hunter/vendor/maplibre/LICENSE.txt
           if ! git diff --cached --quiet; then
             git commit -m "Build reviewed ScottyBites static demo for homepage"
             git push origin HEAD:${{ github.ref_name }}
