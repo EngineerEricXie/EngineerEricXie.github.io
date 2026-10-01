@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: EngineerEricXie/scotty-hunter
-          ref: 98002a546c96786d8fd3a246f86e7089bd65c0a4
+          ref: 4dd08cd9e14fd8370ac2fc91f16977845cd4edf9
           path: .scotty-source
           persist-credentials: false
       - uses: actions/setup-node@v4
@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p scotty-hunter
           rsync -a --delete --exclude=.nojekyll .scotty-source/out/ scotty-hunter/
-          printf '%s\n' '{"source_repository":"https://github.com/EngineerEricXie/scotty-hunter","source_commit":"98002a546c96786d8fd3a246f86e7089bd65c0a4","mode":"static-demo"}' > scotty-hunter/deployment.json
+          printf '%s\n' '{"source_repository":"https://github.com/EngineerEricXie/scotty-hunter","source_commit":"4dd08cd9e14fd8370ac2fc91f16977845cd4edf9","mode":"static-demo"}' > scotty-hunter/deployment.json
           test -f scotty-hunter/index.html
           test -d scotty-hunter/_next
           git config user.name "github-actions[bot]"
