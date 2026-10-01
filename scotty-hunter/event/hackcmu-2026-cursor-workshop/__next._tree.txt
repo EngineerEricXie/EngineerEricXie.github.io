@@ -1,2 +1,2 @@
-:HL["/scotty-hunter/_next/static/css/b22a2e3911d33b03.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"event","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"hackcmu-2026-cursor-workshop","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"dp3VpyHYvM7c9W6SwWA2o"}
+:HL["/scotty-hunter/_next/static/css/cc2120541d49c88f.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"event","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"hackcmu-2026-cursor-workshop","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"mvTnkN1Xolsw_U0_XqMDs"}
