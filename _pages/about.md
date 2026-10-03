@@ -78,13 +78,11 @@ Built a validated C++/CUDA simulation pipeline for flow and transport in complex
 
 - Forecasts 20 future neurite-morphology frames from 10 observations, with repeated sampling to estimate forecast variability.
 - Reduced trajectory-wise mean MAE by **39.6%** and improved skeleton F1 by **45.3%** over gSTA on human iPSC-derived neuron microscopy, using **1.01%** of its parameters.
-- [[Preprint]](https://arxiv.org/abs/2609.23990) · [[PDF]](https://arxiv.org/pdf/2609.23990)
-
-<small>Figure 1 from the preprint, <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</small>
+- [[link]](https://arxiv.org/abs/2609.23990)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">bioRxiv 2026</div><img src='images/publications/axon-topology.png' alt="Experimental validation of simulated cortical neurosphere axon topology" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">bioRxiv 2026</div><a href="https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1"><img src='images/publications/axon-topology.png' alt="Experimental validation of simulated cortical neurosphere axon topology" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Predicting Macroscopic Axon Topology from Microscopic Kinematics: An Interactive Tracking and Random Walk Pipeline for Substrate-Dependent Cortical Neurospheres**
@@ -94,11 +92,11 @@ C. Kim, M. Kim, H. Cao, **T.Y. Hsieh**, Y.J. Zhang, T. Cohen-Karni, V. Webster-W
 *bioRxiv*, 2026
 
 - Linked single-axon growth dynamics to network-scale topology; the generative model reproduced both microscopic behavior and macroscopic axonal density.
-- [[Preprint]](https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1) · [[DOI]](https://doi.org/10.64898/2026.07.30.741748)
+- [[link]](https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><img src='images/publications/siam-news.png' alt="Digital twins of neurons publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIAM News 2026</div><a href="https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/"><img src='images/publications/siam-news.png' alt="Digital twins of neurons publication thumbnail" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Decoding the Neural Enigma: Digital Twins of Neurons Revolutionize Brain Research**
@@ -108,11 +106,11 @@ C. Kim, M. Kim, H. Cao, **T.Y. Hsieh**, Y.J. Zhang, T. Cohen-Karni, V. Webster-W
 *SIAM News*, 2026
 
 - Discussed digital twins of neurons and their role in computational brain research.
-- [[Article]](https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/)
+- [[link]](https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CMAME 2025</div><img src='images/publications/galds.png' alt="GALDS graph-autoencoder surrogate model thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CMAME 2025</div><a href="https://doi.org/10.1016/j.cma.2025.118409"><img src='images/publications/galds.png' alt="GALDS graph-autoencoder surrogate model thumbnail" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 **GALDS: A Graph-Autoencoder-Based Latent Dynamics Surrogate Model to Predict Neurite Material Transport**
@@ -123,11 +121,11 @@ C. Kim, M. Kim, H. Cao, **T.Y. Hsieh**, Y.J. Zhang, T. Cohen-Karni, V. Webster-W
 
 - Achieved approximately **3% mean relative error** and **<8% maximum relative error** on unseen geometries and abnormal transport cases.
 - Delivered **10× faster inference** with **20× less training data**, **10× fewer trainable parameters**, and **6× faster training** than the prior surrogate approach.
-- [[Paper]](https://doi.org/10.1016/j.cma.2025.118409)
+- [[link]](https://doi.org/10.1016/j.cma.2025.118409)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><img src='images/publications/pinn-wbc.png' alt="PINN weak boundary conditions publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Engineering with Computers 2024</div><a href="https://link.springer.com/article/10.1007/s00366-024-01981-5"><img src='images/publications/pinn-wbc.png' alt="PINN weak boundary conditions publication thumbnail" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 **A Multiscale Stabilized Physics-Informed Neural Networks with Weakly Imposed Boundary Conditions Transfer Learning Method for Modeling Advection-Dominated Flow**
@@ -137,11 +135,11 @@ C. Kim, M. Kim, H. Cao, **T.Y. Hsieh**, Y.J. Zhang, T. Cohen-Karni, V. Webster-W
 *Engineering with Computers*, 2024
 
 - Developed a stabilized PINN formulation for advection-dominated flow problems with weak boundary-condition enforcement and transfer learning.
-- [[Paper]](https://link.springer.com/article/10.1007/s00366-024-01981-5)
+- [[link]](https://link.springer.com/article/10.1007/s00366-024-01981-5)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><img src='images/publications/nn-fem.png' alt="Neural-network-enhanced FEM TPMS publication thumbnail" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JMRT 2024</div><a href="https://www.sciencedirect.com/science/article/pii/S2238785424010639"><img src='images/publications/nn-fem.png' alt="Neural-network-enhanced FEM TPMS publication thumbnail" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 **An Efficient Parameterized Neural Network Enhanced Multiscale Finite Element Modeling for Triply Periodic Minimal Surface Meta-Structures and its Applications for Femur**
@@ -151,7 +149,7 @@ Y.Z. Chen, C.H. Wang, **T.Y. Hsieh**, C.C. Tung, P.Y. Chen, T.H. Huang
 *Journal of Materials Research and Technology*, 2024
 
 - Contributed to neural-network-enhanced multiscale finite element modeling for TPMS meta-structures and biomedical applications.
-- [[Paper]](https://www.sciencedirect.com/science/article/pii/S2238785424010639)
+- [[link]](https://www.sciencedirect.com/science/article/pii/S2238785424010639)
 </div>
 </div>
 
@@ -161,11 +159,11 @@ The full publication list is available on [Google Scholar](https://scholar.googl
 
 # 🔬 Selected Projects
 
-- **[ScottyBites · CMU Free-Food Companion](/scotty-hunter/)**: A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders, and a playful Scotty companion. [Try the interactive demo](/scotty-hunter/) · [Source code](https://github.com/EngineerEricXie/scotty-hunter). The demo uses sample events and stores plans locally in your browser.
 - **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
 - **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
 - **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
 - **AI for Materials and Structures**: Developed neural constitutive models, anomaly-detection methods, and multiscale surrogate models for structural and material systems.
+- **[ScottyBites · CMU Free-Food Companion](/scotty-hunter/)**: A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders, and a playful Scotty companion. [Try the interactive demo](/scotty-hunter/) · [Source code](https://github.com/EngineerEricXie/scotty-hunter). The demo uses sample events and stores plans locally in your browser.
 
 <span class='anchor' id='experience'></span>
 
