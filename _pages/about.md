@@ -151,6 +151,7 @@ The full publication list is available on [Google Scholar](https://scholar.googl
 
 # 🔬 Selected Projects
 
+- **[Human Brain MRI Segmentation with MATLAB](/brainweb-segmentation/)**: A seed-guided BrainWeb demonstration combining Gaussian-mixture EM, morphological processing, and 3D region growing, with physical volume measurement and reference-label evaluation. The fixed example achieves Dice **0.9769** on one simulated human MRI. [Results and guide](/brainweb-segmentation/) · [Source code](https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB).
 - **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
 - **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
 - **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.

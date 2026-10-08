@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Human Brain MRI Segmentation with MATLAB</title>
+<style>
+body{font:17px/1.6 system-ui,sans-serif;color:#253537;background:#f1f5f4;margin:0}main{max-width:980px;margin:auto;padding:48px 30px 70px;background:white}h1{font-size:38px;line-height:1.2;max-width:800px}h2{font-size:25px;margin-top:38px}a{color:#08766e}code{background:#edf3f1;padding:2px 5px;font-size:15px}pre{padding:16px;background:#edf3f1;overflow:auto}pre code{padding:0}img{max-width:100%;height:auto}figure{margin:26px 0}figcaption,.small{font-size:14px;color:#566664}table{width:100%;border-collapse:collapse}th,td{padding:11px;border-bottom:1px solid #d7e2df;text-align:left;vertical-align:top}th{background:#edf3f1}.intro{font-size:20px}li{margin:7px 0}.flow{color:#08766e;font-weight:600}
+</style><main>
+<p class="small">BrainWeb human MRI · MATLAB demonstration</p>
+<h1>Human Brain MRI Segmentation with MATLAB</h1>
+<p><a href="https://engineerericxie.github.io/#projects">Tsung-Yeh Hsieh</a> · <a href="https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB">Source code</a> · <a href="https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB/releases/download/v1.0.0/BrainWeb_Segmentation_MATLAB.zip">Download MATLAB project</a></p>
+<p class="intro">Select a small seed region inside the brain, grow a three-dimensional segmentation, and inspect the measured volume and agreement with BrainWeb reference tissues.</p>
+<p>This is a semi-automatic segmentation workflow. You specify the seed region; the supplied Gaussian-mixture model, morphological processing, and region-growing code determine the final mask. All implementations are included.</p>
+<p class="flow">MRI → Gaussian smoothing → EM intensity groups → candidate mask → opening → seeds → 3D region growing → boundary recovery → volume and evaluation</p>
+<h2>Run the demo</h2>
+<p>Use MATLAB Desktop with Image Processing Toolbox. Set Current Folder to this project's root. Start with:</p>
+<pre><code>brainweb_demo('check')
+brainweb_demo('fixed')
+brainweb_demo('manual')</code></pre>
+<table><thead><tr><th>Mode</th><th>What happens</th></tr></thead><tbody>
+<tr><td><code>check</code></td><td>Twelve small known-answer checks cover EM, six-neighbor region growing, physical volume, and seed handling. No drawing is needed.</td></tr>
+<tr><td><code>fixed</code></td><td>Use the existing fixed seed disk and parameters to reproduce the saved baseline. Save the segmentation, measurements, surface, and figures.</td></tr>
+<tr><td><code>manual</code></td><td>Browse MRI slices, draw a small seed polygon, and run the same segmentation pipeline with your seeds.</td></tr>
+</tbody></table>
+<p>Results figures are saved in the background. Manual mode opens the seed-selection window. Each full run has its own folder under <code>Results/Fixed</code> or <code>Results/Manual</code>; the command prints the output path.</p>
+<h2>Choose your seeds</h2>
+<ol>
+<li>Run <code>brainweb_demo('manual')</code>. Wait while the program prepares the EM candidate and opening masks.</li>
+<li>Browse with the slice slider, slice-number box, or scroll wheel. Select a slice with visible brain tissue.</li>
+<li>Click <strong>Draw seed polygon</strong>, draw a small region inside the brain, and double-click to finish. You do not need to trace the whole brain.</li>
+<li>Inspect the colors: yellow marks your region, blue outlines the eligible opening mask, and green shows valid seeds. Seeds are the intersection of your region with that mask on this slice only.</li>
+<li>Click <strong>Use these seeds</strong>. If no valid seeds remain, choose another region or slice. Cancel ends the run.</li>
+</ol>
+<p>Your first manual run starts with no saved annotation. After you accept a region, it is stored under <code>Initialization/Manual</code>. A later manual run previews that region; accept it again or draw a replacement. This package does not preload a previous user's clicks.</p>
+<p>A seed selects eligible connected tissue. A larger drawn region does not directly imply a larger final brain mask, and two different regions in the same connected component can produce the same result.</p>
+<h2>Example result</h2>
+<p>The fixed example contains <strong>203,919 voxels</strong> on a <strong>2 × 2 × 2 mm</strong> grid. Its selected volume is <strong>1,631,352 mm³</strong> (1,631.352 mL), with <strong>Dice 0.976945</strong> against BrainWeb gray-plus-white-matter labels. These are results for this simulated case, not target values for arbitrary MRIs.</p>
+<figure><img src="Example/brain_3d.png" alt="Computed human brain segmentation and BrainWeb reference shown as three-dimensional surfaces"><figcaption>Fixed-mode output alongside BrainWeb gray and white matter. Reference labels are loaded after segmentation and are used only for evaluation.</figcaption></figure>
+<figure><img src="Example/stage_comparison.png" alt="MRI overlays comparing the EM candidate, opening, region growth, and boundary recovery"><figcaption>How the selected region changes through the supplied processing stages.</figcaption></figure>
+<h2>Algorithms</h2>
+<p><strong>Gaussian mixture and EM.</strong> A five-component Gaussian mixture describes normalized MRI intensity groups. Expectation–Maximization fits their means, variances, and weights. The existing example uses components 3 and 4 as the candidate foreground, with the original probability threshold.</p>
+<p><strong>Morphology and connectivity.</strong> Opening breaks thin connections before six-face-neighbor region growing selects the seed-connected component. Dilation, restricted to the original candidate mask, recovers boundary tissue; a final growth pass retains seed-connected voxels.</p>
+<p><strong>Volume.</strong> Multiply the selected voxel count by the product of the three voxel spacings. The surface mesh is a visualization of the mask; it is not used to calculate the voxel-based volume.</p>
+<p><strong>Evaluation.</strong> Dice is twice the overlapping voxel count divided by the sum of the computed and reference voxel counts. The reference combines gray and white matter; cerebrospinal fluid is outside this target. Precision, recall, and volume are also saved.</p>
+<p>Fixed and manual modes share the same algorithm and parameters. Only the seed source differs. Settings are collected in <code>demoOptions.m</code>.</p>
+<h2>Files and outputs</h2>
+<table><thead><tr><th>Path</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>brainweb_demo.m</code></td><td>Main entry point and command-line instructions.</td></tr>
+<tr><td><code>fitGMM_EM.m</code>, <code>growRegion3D.m</code>, <code>maskVolume.m</code></td><td>Complete algorithm implementations.</td></tr>
+<tr><td><code>private/</code></td><td>Seed browser, preprocessing, shared pipeline, evaluation, and plotting.</td></tr>
+<tr><td><code>Data/brainweb_t1.mat</code></td><td>Input simulated human T1 MRI and grid metadata.</td></tr>
+<tr><td><code>Reference/tissue_labels.mat</code></td><td>BrainWeb labels for evaluation after segmentation.</td></tr>
+<tr><td><code>Baseline/</code></td><td>Saved fixed-mode results and measured reproducibility limits.</td></tr>
+<tr><td><code>Example/</code></td><td>Newly reproduced fixed-mode images and numerical summaries.</td></tr>
+<tr><td><code>Results/.../segmentation.mat</code></td><td>Masks, seeds, fitted model, parameters, volume, and evaluation.</td></tr>
+<tr><td><code>summary.csv</code>, <code>baseline_comparison.csv</code></td><td>Stage measurements and comparison with the saved fixed example.</td></tr>
+<tr><td><code>brain_surface.stl</code></td><td>Computed surface for viewing in mesh software.</td></tr>
+<tr><td><code>seed_selection.png</code>, <code>stage_comparison.png</code>, <code>brain_3d.png</code>, <code>slice_comparison.png</code>, <code>all_slices.png</code>, <code>em_diagnostics.png</code></td><td>Seed preview, stages, 3D comparison, slice errors, full-volume review, and EM diagnostics.</td></tr>
+</tbody></table>
+<h2>Data source</h2>
+<p>The input is the <a href="https://brainweb.bic.mni.mcgill.ca/brainweb/">BrainWeb normal simulated human brain</a>: T1, 1 mm source sampling, 3% noise, and 0% intensity non-uniformity. This example samples every second voxel along each axis, retaining the full field of view on a 2 mm grid. Arrays use <code>[row_y, column_x, slice_z]</code> order, with dimensions 109 × 91 × 91. Reference labels were sampled at the same locations.</p>
+<p>BrainWeb requests acknowledgment of its resource and associated publications. In particular: Cocosco et al., <em>BrainWeb: Online Interface to a 3D MRI Simulated Brain Database</em>, NeuroImage 5(4), S425, 1997; and Collins et al., <em>Design and Construction of a Realistic Digital Brain Phantom</em>, IEEE Transactions on Medical Imaging 17(3), 463–468, 1998. See the source website for the full references and current data information. This local package does not assign a new license to BrainWeb data.</p>
+<h2>Validation and scope</h2>
+<p>Run <code>test_pipeline</code> to execute the twelve algorithm checks, reproduce the fixed baseline, and test two programmatically specified seed regions. Those polygons exercise seed intersection and the shared pipeline; they are not recorded mouse drawings. The manual browser is retained from the previously working BrainWeb version.</p>
+<p>The original fixed-mode repetitions were voxel-identical. Comparison allows one voxel (8 mm³) and a Dice difference of 3 × 10⁻⁶ for small numerical differences. This tolerance measures reproducibility of this example, not segmentation accuracy across scanners or operating systems.</p>
+<p>This is a development demonstration on one simulated case. Parameters were selected while inspecting its reference results. Some non-brain tissue and errors near fluid boundaries remain. The standalone edition is tested with MATLAB R2024b on Windows; a new hands-on mouse-drawing session and macOS execution have not been retested.</p>
+</main></html>
