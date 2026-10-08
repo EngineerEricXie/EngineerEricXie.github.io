@@ -151,11 +151,11 @@ The full publication list is available on [Google Scholar](https://scholar.googl
 
 # 🔬 Selected Projects
 
-- **[Human Brain MRI Segmentation with MATLAB](/brainweb-segmentation/)**: A seed-guided BrainWeb demonstration combining Gaussian-mixture EM, morphological processing, and 3D region growing, with physical volume measurement and reference-label evaluation. The fixed example achieves Dice **0.9769** on one simulated human MRI. [Results and guide](/brainweb-segmentation/) · [Source code](https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB).
 - **Scientific ML for Physical Systems**: Built graph neural networks, Neural ODEs, transformers, PINNs, and reduced-order models for PDEs and biological transport.
 - **AI Agents for Simulation**: Developing agentic workflows for simulation setup, execution, validation, analysis, and iteration.
 - **Biological Imaging and Neural Dynamics**: Developed neuron image segmentation and tracking methods and transformer-based models for biological time series.
 - **AI for Materials and Structures**: Developed neural constitutive models, anomaly-detection methods, and multiscale surrogate models for structural and material systems.
+- **[Human Brain MRI Segmentation with MATLAB](/brainweb-segmentation/)**: A seed-guided BrainWeb demonstration combining Gaussian-mixture EM, morphological processing, and 3D region growing, with physical volume measurement and reference-label evaluation. The fixed example achieves Dice **0.9769** on one simulated human MRI. [Source code](https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB).
 - **[ScottyBites · CMU Free-Food Companion](/scotty-hunter/)**: A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders, and a playful Scotty companion. [Try the interactive demo](/scotty-hunter/) · [Source code](https://github.com/EngineerEricXie/scotty-hunter). The demo uses sample events and stores plans locally in your browser.
 
 <span class='anchor' id='experience'></span>
