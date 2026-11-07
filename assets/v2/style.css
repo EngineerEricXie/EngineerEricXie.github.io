@@ -358,16 +358,21 @@ details.more summary:hover { color: var(--ink); }
 .talks li { font-size: 14.5px; color: var(--ink-2); padding: 10px 0; border-bottom: 1px dashed var(--line); }
 .talks li b { color: var(--ink); font-weight: 500; font-family: var(--serif); font-size: 16px; }
 .talks li .m { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 3px; }
-@media (max-width: 760px) { .cv-grid { grid-template-columns: 1fr; } .edu li { grid-template-columns: 96px 1fr; gap: 14px; } .edu .logo { width: 96px; height: 56px; } }
+@media (max-width: 760px) { .cv-grid { grid-template-columns: 1fr; } }
 
 /* ---------- education logos ---------- */
 .edu { list-style: none; margin: 0; padding: 0; }
-.edu li { display: grid; grid-template-columns: 116px 1fr; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.edu li { padding: 16px 0 18px; border-bottom: 1px solid var(--line); }
+.edu li:first-child { padding-top: 6px; }
 .edu li:last-child { border-bottom: 0; }
-.edu .logo { width: 116px; height: 64px; border-radius: 10px; border: 1px solid var(--line); background: #fff; display: grid; place-items: center; overflow: hidden; }
-.edu .logo { position: relative; }
-.edu .logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 6px 8px; background: #fff; z-index: 1; }
-.edu .logo span { font-family: var(--serif); font-size: 17px; letter-spacing: .02em; color: var(--ink-2); }
+.edu .logo { display: flex; align-items: center; height: 44px; margin-bottom: 10px; }
+.edu .logo img { display: block; width: auto; max-width: 100%; }
+.edu .logo.cmu img { height: 20px; }
+.edu .logo.nthu img { height: 44px; }
+.edu .logo img ~ span { display: none; }
+:root[data-theme="dark"] .edu .logo.nthu img { filter: brightness(1.6) saturate(.9); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .edu .logo.nthu img { filter: brightness(1.6) saturate(.9); } }
+.edu .logo span { font-family: var(--serif); font-size: 18px; letter-spacing: .02em; color: var(--ink-2); }
 .edu .deg { font-size: 15px; color: var(--ink-2); }
 .edu .deg b { color: var(--ink); font-weight: 600; display: block; font-size: 15.5px; }
 .edu .deg .when { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: .04em; display: block; margin-top: 3px; }
