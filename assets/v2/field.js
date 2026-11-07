@@ -24,11 +24,10 @@
   var W = 0, H = 0, dpr = 1, spacing = 46, cols = 0, rows = 0, n = 0;
   var X, Y, PX, PY, OX, OY, PIN;          // node state (typed arrays)
   var EA, EB, EL, ne = 0;                 // edges: endpoints + rest length
-  var inkRGB = '26,25,23', clayRGB = '217,119,87';
+  var inkRGB = '26,25,23', clayRGB = '217,119,87', baseAlpha = 0.10;
 
   var mouse = { x: -1e5, y: -1e5, vx: 0, vy: 0, down: false, active: false, lx: 0, ly: 0 };
   var running = !reduceMotion, raf = 0, last = 0, t = 0, needsStaticDraw = true;
-  var lastInput = -1e9, virt = { x: 0, y: 0, px: 0, py: 0, on: false };   // autonomous load when idle / on touch screens
 
   // ---------- palette from CSS custom properties ----------
   function readPalette() {
@@ -37,6 +36,8 @@
     var clay = cs.getPropertyValue('--field-clay').trim();
     if (ink) inkRGB = ink;
     if (clay) clayRGB = clay;
+    var a = parseFloat(cs.getPropertyValue('--field-alpha'));
+    if (!isNaN(a)) baseAlpha = a;
   }
 
   // ---------- lattice construction ----------
@@ -93,21 +94,9 @@
     var R = mouse.down ? 320 : 210;
     var R2 = R * R;
     var strength = mouse.down ? 1.35 : 0.42;
-    var ambient = 0.055;
+    var ambient = 0.07;
     var act = mouse.active;
     var mx = mouse.x, my = mouse.y, mvx = mouse.vx, mvy = mouse.vy;
-
-    // No pointer for a while (or a touch screen): a virtual point load wanders
-    // along a Lissajous path so the lattice is never still.
-    virt.on = (t - lastInput) > 4;
-    if (virt.on) {
-      virt.px = virt.x; virt.py = virt.y;
-      virt.x = W * (0.5 + 0.40 * Math.sin(t * 0.21 + 0.4));
-      virt.y = H * (0.5 + 0.38 * Math.sin(t * 0.146 + 1.9));
-      mx = virt.x; my = virt.y;
-      mvx = (virt.x - virt.px) * 0.6; mvy = (virt.y - virt.py) * 0.6;
-      act = true; R = Math.min(250, W * 0.42); R2 = R * R; strength = W < 768 ? 0.55 : 0.75;
-    }
 
     for (var i = 0; i < n; i++) {
       if (PIN[i]) continue;
@@ -118,10 +107,12 @@
       var fx = (OX[i] - x) * anchor, fy = (OY[i] - y) * anchor;
 
       if (ambient) {
-        // a slow travelling wave so the lattice is alive even when idle
-        var ph = OX[i] * 0.011 + OY[i] * 0.007 - t * 0.85;
-        fx += Math.cos(ph) * ambient;
-        fy += Math.sin(ph * 0.73 + 1.3) * ambient;
+        // two slow travelling waves plus a breathing mode: alive when idle, never a visible "source"
+        var ph1 = OX[i] * 0.011 + OY[i] * 0.007 - t * 0.80;
+        var ph2 = -OX[i] * 0.006 + OY[i] * 0.013 + t * 0.55 + 2.1;
+        var ph3 = (OX[i] + OY[i]) * 0.004 - t * 0.30;
+        fx += Math.cos(ph1) * ambient + Math.sin(ph2) * ambient * 0.8 + Math.cos(ph3) * ambient * 0.5;
+        fy += Math.sin(ph1 * 0.73 + 1.3) * ambient + Math.cos(ph2) * ambient * 0.8 + Math.sin(ph3) * ambient * 0.5;
       }
 
       if (act) {
@@ -181,7 +172,7 @@
     }
     for (k = 0; k < BUCKETS; k++) {
       var f = k / (BUCKETS - 1);
-      var alpha = 0.085 + f * 0.62;
+      var alpha = baseAlpha + f * 0.62;
       var rgb = f < 0.18 ? inkRGB : clayRGB;
       ctx.strokeStyle = 'rgba(' + rgb + ',' + alpha.toFixed(3) + ')';
       ctx.lineWidth = 0.8 + f * 0.9;
@@ -189,19 +180,10 @@
     }
 
     // nodes
-    ctx.fillStyle = 'rgba(' + inkRGB + ',0.16)';
+    ctx.fillStyle = 'rgba(' + inkRGB + ',' + (baseAlpha * 1.6).toFixed(3) + ')';
     for (var i = 0; i < n; i++) {
       if (PIN[i]) continue;
       ctx.fillRect(X[i] - 1, Y[i] - 1, 2, 2);
-    }
-
-    // a faint marker for the wandering virtual load
-    if (virt.on) {
-      ctx.strokeStyle = 'rgba(' + clayRGB + ',0.22)';
-      ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.arc(virt.x, virt.y, 22 + Math.sin(t * 2) * 2, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillStyle = 'rgba(' + clayRGB + ',0.55)';
-      ctx.beginPath(); ctx.arc(virt.x, virt.y, 2.2, 0, Math.PI * 2); ctx.fill();
     }
 
     // potential-well contours while pressing
@@ -251,11 +233,11 @@
       }
       mouse.lx = e.clientX; mouse.ly = e.clientY;
       mouse.x = e.clientX; mouse.y = e.clientY;
-      mouse.active = true; lastInput = t;
+      mouse.active = true;
     }, { passive: true });
     window.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
-      mouse.down = true; mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true; lastInput = t;
+      mouse.down = true; mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
     }, { passive: true });
     window.addEventListener('pointerup', function () { mouse.down = false; }, { passive: true });
     window.addEventListener('pointercancel', function () { mouse.down = false; }, { passive: true });

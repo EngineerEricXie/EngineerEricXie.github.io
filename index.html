@@ -56,7 +56,7 @@
   <!-- ================= NAV ================= -->
   <header class="nav">
     <div class="wrap">
-      <a class="brand" href="#top">Tsung-Yeh Hsieh <span class="zh">謝宗燁</span></a>
+      <a class="brand" href="#top">Tsung-Yeh Hsieh</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#research">Research</a></li>
         <li><a href="#featured">Engineering</a></li>
@@ -128,8 +128,8 @@
             <div class="lbl">Publications, four as first author<small>CMAME · EWC · JMRT · SIAM News · arXiv · bioRxiv</small></div>
           </div>
           <div class="metric">
-            <div class="num">154.5<sup>×</sup></div>
-            <div class="lbl">Speed-up of GPU isogeometric flow &amp; transport over the legacy CPU solver<small>TubularFlowIGA · C++ / CUDA</small></div>
+            <div class="num">9.1<sup>×</sup></div>
+            <div class="lbl">Peak end-to-end speed-up of the GPU isogeometric solver over the HexSim CPU workflow<small>CoupledFlow · C++ / CUDA</small></div>
           </div>
           <div class="metric">
             <div class="num">39.6<sup>%</sup></div>
@@ -240,38 +240,45 @@
         <div class="sec-head">
           <span class="idx">02 / Engineering</span>
           <h2>Featured build</h2>
+          <p class="lede">The simulator behind the data: a coupled flow-and-transport framework I built for branching biological geometries, from CT or microscopy reconstruction to GPU solve.</p>
         </div>
         <div class="card feature">
           <div class="txt">
-            <div class="kicker">Open source · C++ / CUDA</div>
-            <h3><a href="https://github.com/EngineerEricXie/TubularFlowIGA">GPU-accelerated isogeometric analysis for flow and transport</a></h3>
-            <p>A validated simulation pipeline for flow and transport in complex branching geometries. It turns neuron reconstructions into physics-grounded, scalable data generation for scientific machine learning and digital-twin work.</p>
-            <p>Across three branching-neuron cases the V100 backend finishes the reported end-to-end runs in <strong>7.87–78.52 s</strong>, <strong>36.0×–154.5× faster</strong> than the legacy NeuronTransportIGA CPU implementation.</p>
+            <div class="kicker">Open source · CoupledFlow</div>
+            <h3><a href="https://github.com/EngineerEricXie/TubularFlowIGA">GPU-accelerated isogeometric flow and transport for branching neurons</a></h3>
+            <p>A C++ framework for coupled flow and transport across 0D, 1D and 3D domains: lumped circuits, vascular network models, tetrahedral finite elements and body-fitted isogeometric analysis, with multispecies transport, moving domains and checkpoint/restart. CPU solvers run on MPI and PETSc; the IGA backend also runs on a single CUDA GPU.</p>
+            <p>Against the HexSim CPU workflow on three branching-neuron geometries, the optimized CPU path is <strong>1.4–2.7× faster</strong> and the V100 backend <strong>1.8–9.1× faster</strong> end to end. On the GPU the gain comes from assembly: <strong>5.5–24.5× faster</strong> than 8–16 MPI ranks, at roughly half the peak memory.</p>
+            <div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" width="16" height="16">C++</span><span class="tk si"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nvidia.svg" alt="" loading="lazy" width="16" height="16">CUDA</span><span class="tk"><span class="d"></span>MPI</span><span class="tk"><span class="d"></span>PETSc</span><span class="tk"><span class="d"></span>OpenMP</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><span class="d"></span>CMake</span><span class="tk"><span class="d"></span>Isogeometric analysis</span></div>
             <div class="links">
               <a href="https://github.com/EngineerEricXie/TubularFlowIGA">Repository</a>
-              <a href="https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/BENCHMARKS.md">Benchmark details</a>
+              <a href="https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/validation/BENCHMARKS.md">Benchmarks &amp; validation</a>
             </div>
           </div>
           <div class="data">
-            <div class="bars-cap">Speed-up vs. legacy CPU · end-to-end wall time</div>
-            <div class="bars">
-              <div class="bar"><span class="name" title="bifurcation">bifurcation</span><span class="track"><span class="fill" style="--w: 36.4%"></span></span><span class="val">56.3×</span></div>
-              <div class="bar"><span class="name" title="NMO_54499_shrink">NMO_54499</span><span class="track"><span class="fill" style="--w: 23.3%"></span></span><span class="val">36.0×</span></div>
-              <div class="bar"><span class="name" title="NMO_66748_subtree">NMO_66748</span><span class="track"><span class="fill" style="--w: 100%"></span></span><span class="val">154.5×</span></div>
+            <div class="big2">
+              <div><div class="n">9.1<sup>×</sup></div><div class="l">faster end to end on one V100 than the HexSim CPU workflow<small>best case · bifurcation geometry</small></div></div>
+              <div><div class="n">24.5<sup>×</sup></div><div class="l">faster transport assembly on CUDA than the MPI CPU path<small>8 ranks vs. 1 GPU</small></div></div>
             </div>
-            <div class="table-scroll">
-              <table class="bench">
-                <thead><tr><th>Solver</th><th>bifurcation</th><th>NMO_54499</th><th>NMO_66748</th></tr></thead>
-                <tbody>
-                  <tr class="dim"><td>nodes / elements</td><td>14,565 / 12,780</td><td>16,344 / 14,040</td><td>57,456 / 50,940</td></tr>
-                  <tr><td>Legacy CPU</td><td>442.68 s</td><td>589.32 s</td><td>12,127.80 s</td></tr>
-                  <tr><td>HexSim CPU</td><td>71.98 s</td><td>69.61 s</td><td>137.36 s</td></tr>
-                  <tr><td>TubularFlowIGA CPU</td><td>26.75 s</td><td>33.03 s</td><td>98.77 s</td></tr>
-                  <tr class="hl"><td>TubularFlowIGA V100</td><td>7.87 s</td><td>16.39 s</td><td>78.52 s</td></tr>
-                </tbody>
-              </table>
+            <div class="bars-cap"><span>End-to-end speed-up vs. HexSim CPU</span><span class="legend"><span class="cpu"><i></i>CPU · MPI</span><span class="gpu"><i></i>GPU · V100</span></span></div>
+            <div class="grp">
+              <div class="case">
+                <div class="name"><span>Bifurcation</span><small>12.8k elements</small></div>
+                <div class="bar"><span class="track"><span class="fill cpu" style="--w: 29.4%"></span></span><span class="val">2.7×</span></div>
+                <div class="bar"><span class="track"><span class="fill gpu" style="--w: 100%"></span></span><span class="val">9.1×</span></div>
+              </div>
+              <div class="case">
+                <div class="name"><span>Reconstructed neuron</span><small>14.0k elements</small></div>
+                <div class="bar"><span class="track"><span class="fill cpu" style="--w: 23.0%"></span></span><span class="val">2.1×</span></div>
+                <div class="bar"><span class="track"><span class="fill gpu" style="--w: 46.4%"></span></span><span class="val">4.2×</span></div>
+              </div>
+              <div class="case">
+                <div class="name"><span>Neuron subtree</span><small>50.9k elements</small></div>
+                <div class="bar"><span class="track"><span class="fill cpu" style="--w: 15.2%"></span></span><span class="val">1.4×</span></div>
+                <div class="bar"><span class="track"><span class="fill gpu" style="--w: 19.1%"></span></span><span class="val">1.7×</span></div>
+              </div>
             </div>
-            <p class="fn">Runtimes are case- and hardware-specific; see the benchmark documentation for validation and scope.</p>
+            <p class="fn">End-to-end wall time per case on PSC Bridges-2, FP64. Hardware- and solver-option-specific; not a scaling study. Single-GPU backend.</p>
+            <div class="next"><b>Next</b> · FEniCS and OpenFOAM baselines</div>
           </div>
         </div>
       </div>
@@ -370,12 +377,12 @@
           <h2>Selected projects</h2>
         </div>
         <div class="proj-grid">
-          <article class="card pcard"><span class="num">01</span><h3>Scientific ML for physical systems</h3><p>Graph neural networks, Neural ODEs, transformers, PINNs and reduced-order models for PDEs and biological transport.</p></article>
-          <article class="card pcard"><span class="num">02</span><h3>AI agents for simulation</h3><p>Agentic workflows for simulation setup, execution, validation, analysis and iteration.</p></article>
-          <article class="card pcard"><span class="num">03</span><h3>Biological imaging and neural dynamics</h3><p>Neuron image segmentation and tracking methods, and transformer-based models for biological time series.</p></article>
-          <article class="card pcard"><span class="num">04</span><h3>AI for materials and structures</h3><p>Neural constitutive models, anomaly-detection methods and multiscale surrogate models for structural and material systems.</p></article>
-          <article class="card pcard demo"><span class="num">05 · demo</span><h3><a href="brainweb-segmentation/">Human brain MRI segmentation in MATLAB</a></h3><p>A seed-guided BrainWeb demonstration combining Gaussian-mixture EM, morphological processing and 3D region growing, with physical volume measurement and reference-label evaluation. The fixed example reaches Dice <strong>0.9769</strong> on one simulated human MRI.</p><div class="act"><a href="brainweb-segmentation/">Results guide</a><a href="https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB">Source code</a></div></article>
-          <article class="card pcard demo"><span class="num">06 · demo</span><h3><a href="scotty-hunter/">ScottyBites · CMU free-food companion</a></h3><p>A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders and a playful Scotty companion. Uses sample events and stores plans locally in your browser.</p><div class="act"><a href="scotty-hunter/">Interactive demo</a><a href="https://github.com/EngineerEricXie/scotty-hunter">Source code</a></div></article>
+          <article class="card pcard"><span class="num">01</span><h3>Scientific ML for physical systems</h3><p>Graph neural networks, Neural ODEs, transformers, PINNs and reduced-order models for PDEs and biological transport.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" width="16" height="16">PyTorch</span><span class="tk"><span class="d"></span>JAX</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" loading="lazy" width="16" height="16">NumPy</span></div></article>
+          <article class="card pcard"><span class="num">02</span><h3>AI agents for simulation</h3><p>Agentic workflows for simulation setup, execution, validation, analysis and iteration.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><span class="d"></span>LLM agents</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy" width="16" height="16">Docker</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="" loading="lazy" width="16" height="16">Linux</span></div></article>
+          <article class="card pcard"><span class="num">03</span><h3>Biological imaging and neural dynamics</h3><p>Neuron image segmentation and tracking methods, and transformer-based models for biological time series.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" width="16" height="16">PyTorch</span><span class="tk"><span class="d"></span>Transformers</span><span class="tk"><span class="d"></span>Diffusion models</span></div></article>
+          <article class="card pcard"><span class="num">04</span><h3>AI for materials and structures</h3><p>Neural constitutive models, anomaly-detection methods and multiscale surrogate models for structural and material systems.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" width="16" height="16">PyTorch</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/matlab/matlab-original.svg" alt="" loading="lazy" width="16" height="16">MATLAB</span><span class="tk"><span class="d"></span>FEM</span></div></article>
+          <article class="card pcard"><span class="num">05 <span class="k">· demo</span></span><h3><a href="brainweb-segmentation/">Human brain MRI segmentation in MATLAB</a></h3><p>A seed-guided BrainWeb demonstration combining Gaussian-mixture EM, morphological processing and 3D region growing, with physical volume measurement and reference-label evaluation. The fixed example reaches Dice <strong>0.9769</strong> on one simulated human MRI.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/matlab/matlab-original.svg" alt="" loading="lazy" width="16" height="16">MATLAB</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" loading="lazy" width="16" height="16">HTML</span></div><div class="act"><a href="brainweb-segmentation/">Results guide</a><a href="https://github.com/EngineerEricXie/BrainWeb_Segmentation_MATLAB">Source code</a></div></article>
+          <article class="card pcard"><span class="num">06 <span class="k">· demo</span></span><h3><a href="scotty-hunter/">ScottyBites · CMU free-food companion</a></h3><p>A map-first campus food prototype with walking-aware meal plans, evidence-backed event details, RSVP reminders and a playful Scotty companion. Uses sample events and stores plans locally in your browser.</p><div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" loading="lazy" width="16" height="16">TypeScript</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" alt="" loading="lazy" width="16" height="16">Next.js</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" loading="lazy" width="16" height="16">React</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" loading="lazy" width="16" height="16">CSS</span></div><div class="act"><a href="scotty-hunter/">Interactive demo</a><a href="https://github.com/EngineerEricXie/scotty-hunter">Source code</a></div></article>
         </div>
       </div>
     </section>
@@ -391,10 +398,19 @@
         <div class="cv-grid">
           <div class="cv-block">
             <h3>Education</h3>
-            <ul class="cv-list">
-              <li><span class="when">2024 – now</span><span class="what"><b>Ph.D., Mechanical Engineering</b>, Carnegie Mellon University. Computational Bio-Modeling Lab; advisor Prof. Jessica Zhang. Qualifying exam passed Sept. 2025.</span></li>
-              <li><span class="when">2021 – 2023</span><span class="what"><b>M.S., Power Mechanical Engineering</b>, National Tsing Hua University. GPA 4.08 / 4.3; advisor Prof. Tsung-Hui (Alex) Huang.</span></li>
-              <li><span class="when">2017 – 2021</span><span class="what"><b>B.S., Power Mechanical Engineering</b>, National Tsing Hua University. Electrical and Control Division; advisor Prof. J. Andrew Yeh.</span></li>
+            <ul class="edu">
+              <li>
+                <div class="logo"><img src="images/logos/cmu.svg" alt="Carnegie Mellon University" onerror="this.remove()"><span>CMU</span></div>
+                <div class="deg"><b>Ph.D., Mechanical Engineering</b>Carnegie Mellon University · Computational Bio-Modeling Lab, advisor Prof. Jessica Zhang. Qualifying exam passed Sept. 2025.<span class="when">2024 – present</span></div>
+              </li>
+              <li>
+                <div class="logo"><img src="images/logos/nthu.svg" alt="National Tsing Hua University" onerror="this.remove()"><span>NTHU</span></div>
+                <div class="deg"><b>M.S., Power Mechanical Engineering</b>National Tsing Hua University · GPA 4.08 / 4.3, advisor Prof. Tsung-Hui (Alex) Huang.<span class="when">2021 – 2023</span></div>
+              </li>
+              <li>
+                <div class="logo"><img src="images/logos/nthu.svg" alt="National Tsing Hua University" onerror="this.remove()"><span>NTHU</span></div>
+                <div class="deg"><b>B.S., Power Mechanical Engineering</b>National Tsing Hua University · Electrical and Control Division, advisor Prof. J. Andrew Yeh.<span class="when">2017 – 2021</span></div>
+              </li>
             </ul>
           </div>
           <div class="cv-block">
@@ -408,9 +424,9 @@
           <div class="cv-block">
             <h3>Technical skills</h3>
             <div class="skills">
-              <div class="row"><span class="k">ML</span><span class="v"><span>Python</span><span>PyTorch</span><span>JAX</span><span>GNNs</span><span>Neural ODEs</span><span>Transformers</span><span>PINNs</span></span></div>
-              <div class="row"><span class="k">Sci. comp.</span><span class="v"><span>C / C++</span><span>CUDA</span><span>MPI</span><span>PETSc</span><span>FEniCS</span><span>Numerical methods</span><span>HPC</span></span></div>
-              <div class="row"><span class="k">Tools</span><span class="v"><span>Docker</span><span>Git</span><span>Linux</span><span>ParaView</span></span></div>
+              <div class="row"><span class="k">ML</span><span class="v"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" width="16" height="16">PyTorch</span><span class="tk"><span class="d"></span>JAX</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" loading="lazy" width="16" height="16">NumPy</span><span class="tk"><span class="d"></span>GNNs</span><span class="tk"><span class="d"></span>Neural ODEs</span><span class="tk"><span class="d"></span>Transformers</span><span class="tk"><span class="d"></span>PINNs</span></span></div>
+              <div class="row"><span class="k">Sci. comp.</span><span class="v"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" width="16" height="16">C / C++</span><span class="tk si"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nvidia.svg" alt="" loading="lazy" width="16" height="16">CUDA</span><span class="tk"><span class="d"></span>MPI</span><span class="tk"><span class="d"></span>PETSc</span><span class="tk"><span class="d"></span>FEniCS</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/matlab/matlab-original.svg" alt="" loading="lazy" width="16" height="16">MATLAB</span><span class="tk"><span class="d"></span>Numerical methods</span><span class="tk"><span class="d"></span>HPC</span></span></div>
+              <div class="row"><span class="k">Tools</span><span class="v"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy" width="16" height="16">Docker</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy" width="16" height="16">Git</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="" loading="lazy" width="16" height="16">Linux</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bash/bash-original.svg" alt="" loading="lazy" width="16" height="16">Bash</span><span class="tk"><span class="d"></span>ParaView</span></span></div>
             </div>
           </div>
           <div class="cv-block">
@@ -460,14 +476,13 @@
           <a class="chip" href="files/Tsung-Yeh_Hsieh_CV.pdf">CV (PDF)</a>
         </div>
       </div>
-      <div class="card sim-note">
-        <div class="t">About the background</div>
-        <p>A 2-D mass–spring lattice solved live in your browser: Verlet integration, two Gauss–Seidel sweeps of edge-length constraints per frame, and a weak anchor to the rest configuration. Edge colour encodes engineering strain <code>|ℓ − ℓ₀| / ℓ₀</code>. Move the pointer to perturb it; press and drag to apply a point load.</p>
-        <button class="btn ghost" id="sim-btn" type="button">Pause simulation</button>
+      <div class="foot-right">
+        <span class="k">Background</span>
+        <span>A mass–spring lattice solved live in your browser. Drag anywhere to load it; edge colour is strain. <button class="linkbtn" id="sim-btn" type="button">Pause</button></span>
       </div>
       <div class="colophon">
         <span>© 2026 Tsung-Yeh Hsieh · Pittsburgh, PA</span>
-        <span>Hand-built with HTML, CSS and a 2-D canvas · <a href="legacy/">classic version</a></span>
+        <span><a href="legacy/">Previous version</a></span>
       </div>
     </div>
   </footer>
@@ -503,9 +518,9 @@
     sb.addEventListener('click', function () {
       if (!window.latticeField) return;
       var on = window.latticeField.toggle();
-      sb.textContent = on ? 'Pause simulation' : 'Resume simulation';
+      sb.textContent = on ? 'Pause' : 'Resume';
     });
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) sb.textContent = 'Resume simulation';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) sb.textContent = 'Resume';
 
     // reveal on scroll
     var els = document.querySelectorAll('.reveal');
