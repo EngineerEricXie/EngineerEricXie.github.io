@@ -4,7 +4,7 @@
  * A 2-D mass–spring lattice integrated in real time:
  *   • Verlet integration with a weak anchor to the rest configuration
  *   • Position-based (Gauss–Seidel) relaxation of edge-length constraints
- *   • The pointer acts as a point load / gravity well; pressing deepens the well
+ *   • The pointer acts as a light point load / gravity well
  *   • Edge colour encodes engineering strain |ℓ − ℓ₀| / ℓ₀
  *
  * Deliberately cheap: a few hundred nodes, ~1.5k edges, 2-D canvas only,
@@ -26,7 +26,7 @@
   var EA, EB, EL, ne = 0;                 // edges: endpoints + rest length
   var inkRGB = '26,25,23', clayRGB = '217,119,87', baseAlpha = 0.10;
 
-  var mouse = { x: -1e5, y: -1e5, vx: 0, vy: 0, down: false, active: false, lx: 0, ly: 0 };
+  var mouse = { x: -1e5, y: -1e5, vx: 0, vy: 0, active: false, lx: 0, ly: 0 };
   var running = !reduceMotion, raf = 0, last = 0, t = 0, needsStaticDraw = true;
 
   // ---------- palette from CSS custom properties ----------
@@ -91,9 +91,9 @@
     t += dt;
     var damp = 0.90;            // velocity retained per frame
     var anchor = 0.030;         // pull toward rest position
-    var R = mouse.down ? 320 : 210;
+    var R = 210;
     var R2 = R * R;
-    var strength = mouse.down ? 1.35 : 0.42;
+    var strength = 0.42;
     var ambient = 0.07;
     var act = mouse.active;
     var mx = mouse.x, my = mouse.y, mvx = mouse.vx, mvy = mouse.vy;
@@ -185,18 +185,6 @@
       if (PIN[i]) continue;
       ctx.fillRect(X[i] - 1, Y[i] - 1, 2, 2);
     }
-
-    // potential-well contours while pressing
-    if (mouse.down && mouse.active) {
-      ctx.strokeStyle = 'rgba(' + clayRGB + ',0.35)';
-      ctx.lineWidth = 1;
-      for (var r = 1; r <= 3; r++) {
-        var rad = 28 * r + Math.sin(t * 3 + r) * 3;
-        ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, rad, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-    }
   }
 
   // ---------- loop ----------
@@ -235,14 +223,8 @@
       mouse.x = e.clientX; mouse.y = e.clientY;
       mouse.active = true;
     }, { passive: true });
-    window.addEventListener('pointerdown', function (e) {
-      if (e.pointerType === 'mouse' && e.button !== 0) return;
-      mouse.down = true; mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
-    }, { passive: true });
-    window.addEventListener('pointerup', function () { mouse.down = false; }, { passive: true });
-    window.addEventListener('pointercancel', function () { mouse.down = false; }, { passive: true });
-    document.addEventListener('pointerleave', function () { mouse.active = false; mouse.down = false; });
-    window.addEventListener('blur', function () { mouse.active = false; mouse.down = false; });
+    document.addEventListener('pointerleave', function () { mouse.active = false; });
+    window.addEventListener('blur', function () { mouse.active = false; });
 
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) stop(); else start();
