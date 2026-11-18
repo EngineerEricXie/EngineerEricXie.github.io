@@ -124,20 +124,20 @@
       <div class="wrap">
         <div class="grid">
           <div class="metric">
+            <div class="num">3</div>
+            <div class="lbl">Layers of the stack I build myself: GPU solvers, the models that learn from them, and the agents that run both<small>C++ / CUDA · PyTorch · LLM agents</small></div>
+          </div>
+          <div class="metric">
             <div class="num">7</div>
-            <div class="lbl">Publications, four as first author<small>CMAME · EWC · JMRT · SIAM News · arXiv · bioRxiv</small></div>
-          </div>
-          <div class="metric">
-            <div class="num">9.1<sup>×</sup></div>
-            <div class="lbl">Peak end-to-end speed-up of the GPU isogeometric solver over the HexSim CPU workflow<small>CoupledFlow · C++ / CUDA</small></div>
-          </div>
-          <div class="metric">
-            <div class="num">39.6<sup>%</sup></div>
-            <div class="lbl">Lower forecast error than gSTA on live-cell neuron microscopy, using 1% of its parameters<small>MGRD · arXiv 2026</small></div>
+            <div class="lbl">Papers, four as first author, from neuron transport to physics-research agents<small>2024 – 2026</small></div>
           </div>
           <div class="metric">
             <div class="num">9</div>
-            <div class="lbl">Conference presentations across USNCCM, EMI, WCCM and national meetings<small>2021 – 2025</small></div>
+            <div class="lbl">Conference talks in the United States, Japan and Taiwan<small>USNCCM travel award · 2025</small></div>
+          </div>
+          <div class="metric">
+            <div class="num">2</div>
+            <div class="lbl">Journals I review for: <i>Computer Aided Geometric Design</i> and <i>Engineering with Computers</i><small>Peer review</small></div>
           </div>
         </div>
       </div>
@@ -153,9 +153,11 @@
               <h2>Recent</h2>
             </div>
             <ul class="news">
+              <li><time>2026.11</time><div>Our GALDS neuron digital twin was featured by the <a href="https://www.psc.edu/virtual-nerve-cells/">Pittsburgh Supercomputing Center</a> and <a href="https://engineering.cmu.edu/digital-twin-initiative/news/2026/11/05-virtual-nerve-cells.html">CMU Engineering</a>, covering how we used the Bridges-2 supercomputer to simulate material transport in neurons.<span class="new">new</span></div></li>
               <li><time>2026.11</time><div>Co-authored <a href="https://arxiv.org/abs/2611.06910">FrontierPhysics</a>, an arXiv benchmark that tests whether AI agents can carry out end-to-end physics research, with 56 tasks written by 42 physicists across nine domains.<span class="new">new</span></div></li>
               <li><time>2026.09</time><div>Released <a href="https://arxiv.org/abs/2609.23990">MGRD</a>, an arXiv preprint on compact, variance-aware neurite forecasting across simulation and microscopy data.</div></li>
-              <li><time>2026.07</time><div>Co-authored a <a href="https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1">bioRxiv preprint</a> on predicting macroscopic axon topology from microscopic growth kinematics in cortical neurospheres.</div></li>
+              <li><time>2026.07</time><div>Co-authored <a href="https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1"><i>Predicting macroscopic axon topology from microscopic kinematics</i></a>, a bioRxiv preprint that tracks axon growth in cortical neurospheres and reproduces network-scale axon density with a random-walk model.</div></li>
+              <li><time>2026.04</time><div>Wrote <a href="https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/"><i>Decoding the neural enigma: digital twins of neurons revolutionize brain research</i></a> with Prof. Jessica Zhang for SIAM News.</div></li>
               <li><time>2025.09</time><div>Passed the Ph.D. qualifying exam at Carnegie Mellon University.</div></li>
               <li><time>2025.07</time><div>Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.</div></li>
             </ul>
@@ -249,7 +251,7 @@
             <h3><a href="https://github.com/EngineerEricXie/TubularFlowIGA">GPU-accelerated isogeometric flow and transport for branching neurons</a></h3>
             <p>A C++ framework for coupled flow and transport across 0D, 1D and 3D domains: lumped circuits, vascular network models, tetrahedral finite elements and body-fitted isogeometric analysis, with multispecies transport, moving domains and checkpoint/restart. CPU solvers run on MPI and PETSc; the IGA backend also runs on a single CUDA GPU.</p>
             <p>Against the HexSim CPU workflow on three branching-neuron geometries, the optimized CPU path is <strong>1.4–2.7× faster</strong> and the V100 backend <strong>1.8–9.1× faster</strong> end to end. On the GPU the gain comes from assembly: <strong>5.5–24.5× faster</strong> than 8–16 MPI ranks, at roughly half the peak memory.</p>
-            <div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" width="16" height="16">C++</span><span class="tk si"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nvidia.svg" alt="" loading="lazy" width="16" height="16">CUDA</span><span class="tk"><span class="d"></span>MPI</span><span class="tk"><span class="d"></span>PETSc</span><span class="tk"><span class="d"></span>OpenMP</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><span class="d"></span>CMake</span><span class="tk"><span class="d"></span>Isogeometric analysis</span></div>
+            <div class="stack"><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" width="16" height="16">C++</span><span class="tk si"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nvidia.svg" alt="" loading="lazy" width="16" height="16">CUDA</span><span class="tk"><span class="d"></span>MPI</span><span class="tk"><span class="d"></span>PETSc</span><span class="tk"><span class="d"></span>OpenMP</span><span class="tk"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" width="16" height="16">Python</span><span class="tk"><span class="d"></span>Isogeometric analysis</span></div>
             <div class="links">
               <a href="https://github.com/EngineerEricXie/TubularFlowIGA">Repository</a>
               <a href="https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/validation/BENCHMARKS.md">Benchmarks &amp; validation</a>
@@ -296,11 +298,7 @@
         <ol class="pubs">
 
           <li class="pub">
-            <a class="thumb thumb-type" href="https://arxiv.org/abs/2611.06910" aria-label="FrontierPhysics on arXiv">
-              <span class="tt-kicker">Benchmark · AI agents</span>
-              <span class="tt-title">FrontierPhysics</span>
-              <span class="tt-stats"><span><b>56</b>tasks</span><span><b>42</b>physicists</span><span><b>9</b>domains</span><span><b>22</b>models</span></span>
-            </a>
+            <a class="thumb" href="https://arxiv.org/abs/2611.06910"><img src="images/publications/frontierphysics.png" alt="FrontierPhysics overview: physicists build tasks, the tasks pass quality review, AI agents run them, rollouts are graded and failures are analyzed" loading="lazy" width="1400" height="483"></a>
             <div>
               <div class="meta"><span class="venue preprint">arXiv</span><span class="year">2026 · preprint</span></div>
               <h3><a href="https://arxiv.org/abs/2611.06910">FrontierPhysics: Evaluating agents for end-to-end physics research</a></h3>

@@ -303,13 +303,6 @@ details.more summary:hover { color: var(--ink); }
 .pub .thumb { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 8px; overflow: hidden; transition: border-color .15s, transform .2s; }
 .pub .thumb:hover { border-color: var(--clay); transform: translateY(-2px); }
 .pub .thumb img { width: 100%; height: auto; border-radius: 4px; }
-/* Typographic thumbnail for papers without a figure of their own */
-.pub .thumb-type { aspect-ratio: 1400 / 630; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; padding: 16px 18px; text-decoration: none; color: var(--ink); background: linear-gradient(135deg, var(--surface) 0%, var(--clay-soft) 100%); }
-.thumb-type .tt-kicker { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--clay-ink); }
-.thumb-type .tt-title { font-family: var(--serif); font-size: clamp(26px, 3vw, 34px); line-height: 1; letter-spacing: -.01em; }
-.thumb-type .tt-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; border-top: 1px solid var(--line); padding-top: 8px; }
-.thumb-type .tt-stats span { font-family: var(--mono); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-3); }
-.thumb-type .tt-stats b { display: block; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.1; letter-spacing: 0; color: var(--ink); }
 .pub .meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .venue { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--clay-ink); background: var(--clay-soft); padding: 3px 8px; border-radius: 5px; }
 .venue.preprint { color: var(--ink-2); background: var(--surface-2); }
