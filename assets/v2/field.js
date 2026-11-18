@@ -24,7 +24,7 @@
   var W = 0, H = 0, dpr = 1, spacing = 46, cols = 0, rows = 0, n = 0;
   var X, Y, PX, PY, OX, OY, PIN;          // node state (typed arrays)
   var EA, EB, EL, ne = 0;                 // edges: endpoints + rest length
-  var inkRGB = '26,25,23', clayRGB = '217,119,87', baseAlpha = 0.10;
+  var inkRGB = '18,22,28', accentRGB = '61,95,217', baseAlpha = 0.10;
 
   var mouse = { x: -1e5, y: -1e5, vx: 0, vy: 0, active: false, lx: 0, ly: 0 };
   var running = !reduceMotion, raf = 0, last = 0, t = 0, needsStaticDraw = true;
@@ -33,9 +33,9 @@
   function readPalette() {
     var cs = getComputedStyle(document.documentElement);
     var ink = cs.getPropertyValue('--field-ink').trim();
-    var clay = cs.getPropertyValue('--field-clay').trim();
+    var accent = cs.getPropertyValue('--field-accent').trim();
     if (ink) inkRGB = ink;
-    if (clay) clayRGB = clay;
+    if (accent) accentRGB = accent;
     var a = parseFloat(cs.getPropertyValue('--field-alpha'));
     if (!isNaN(a)) baseAlpha = a;
   }
@@ -173,7 +173,7 @@
     for (k = 0; k < BUCKETS; k++) {
       var f = k / (BUCKETS - 1);
       var alpha = baseAlpha + f * 0.62;
-      var rgb = f < 0.18 ? inkRGB : clayRGB;
+      var rgb = f < 0.18 ? inkRGB : accentRGB;
       ctx.strokeStyle = 'rgba(' + rgb + ',' + alpha.toFixed(3) + ')';
       ctx.lineWidth = 0.8 + f * 0.9;
       ctx.stroke(paths[k]);
