@@ -153,17 +153,17 @@
               <h2>Recent</h2>
             </div>
             <ul class="news">
-              <li><time>2026.11</time><div>Our GALDS neuron digital twin was featured by the <a href="https://www.psc.edu/virtual-nerve-cells/">Pittsburgh Supercomputing Center</a> and <a href="https://engineering.cmu.edu/digital-twin-initiative/news/2026/11/05-virtual-nerve-cells.html">CMU Engineering</a>, covering how we used the Bridges-2 supercomputer to simulate material transport in neurons.<span class="new">new</span></div></li>
-              <li><time>2026.11</time><div>Co-authored <a href="https://arxiv.org/abs/2611.06910">FrontierPhysics</a>, an arXiv benchmark that tests whether AI agents can carry out end-to-end physics research, with 56 tasks written by 42 physicists across nine domains.<span class="new">new</span></div></li>
-              <li><time>2026.09</time><div>Released <a href="https://arxiv.org/abs/2609.23990">MGRD</a>, an arXiv preprint on compact, variance-aware neurite forecasting across simulation and microscopy data.</div></li>
-              <li><time>2026.07</time><div>Co-authored <a href="https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1"><i>Predicting macroscopic axon topology from microscopic kinematics</i></a>, a bioRxiv preprint that tracks axon growth in cortical neurospheres and reproduces network-scale axon density with a random-walk model.</div></li>
-              <li><time>2026.04</time><div>Wrote <a href="https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/"><i>Decoding the neural enigma: digital twins of neurons revolutionize brain research</i></a> with Prof. Jessica Zhang for SIAM News.</div></li>
-              <li><time>2025.09</time><div>Passed the Ph.D. qualifying exam at Carnegie Mellon University.</div></li>
-              <li><time>2025.07</time><div>Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.</div></li>
+              <li><time>2026.11</time><div>GALDS, our neuron digital twin built on the Bridges-2 supercomputer, was featured by <a href="https://www.psc.edu/virtual-nerve-cells/">PSC</a> and <a href="https://engineering.cmu.edu/digital-twin-initiative/news/2026/11/05-virtual-nerve-cells.html">CMU Engineering</a>.<span class="new">new</span></div></li>
+              <li><time>2026.11</time><div>Co-authored <a href="https://arxiv.org/abs/2611.06910">FrontierPhysics</a>, a benchmark of whether AI agents can do end-to-end physics research.<span class="new">new</span></div></li>
+              <li><time>2026.09</time><div>Introduced <a href="https://arxiv.org/abs/2609.23990">MGRD</a>, a compact diffusion model that forecasts neurite growth and its uncertainty.</div></li>
+              <li><time>2026.07</time><div>Co-authored <a href="https://www.biorxiv.org/content/10.64898/2026.07.30.741748v1"><i>Predicting macroscopic axon topology from microscopic kinematics</i></a>.</div></li>
             </ul>
             <details class="more">
               <summary>Older news</summary>
               <ul class="news">
+              <li><time>2026.04</time><div>Wrote <a href="https://www.siam.org/publications/siam-news/articles/decoding-the-neural-enigma-digital-twins-of-neurons-revolutionize-brain-research/"><i>Decoding the neural enigma: digital twins of neurons revolutionize brain research</i></a> with Prof. Jessica Zhang for SIAM News.</div></li>
+              <li><time>2025.09</time><div>Passed the Ph.D. qualifying exam at Carnegie Mellon University.</div></li>
+              <li><time>2025.07</time><div>Presented autoencoder-based surrogate modeling work at the 18th U.S. National Congress on Computational Mechanics in Chicago and received a Travel Award.</div></li>
                 <li><time>2024.08</time><div>Started Ph.D. study in Mechanical Engineering at Carnegie Mellon University.</div></li>
                 <li><time>2024.05</time><div>Presented shock wave modeling work at the Engineering Mechanics Institute Conference and Probabilistic Mechanics &amp; Reliability Conference in Chicago.</div></li>
                 <li><time>2023.10</time><div>Received Third Place in the Student Paper Competition at the NCFD Conference, Taiwan.</div></li>
@@ -247,7 +247,7 @@
         </div>
         <div class="card feature">
           <div class="txt">
-            <div class="kicker">Open source · CoupledFlow</div>
+            <div class="kicker">Open source · TubularFlowIGA</div>
             <h3><a href="https://github.com/EngineerEricXie/TubularFlowIGA">GPU-accelerated isogeometric flow and transport for branching neurons</a></h3>
             <p>A C++ framework for coupled flow and transport across 0D, 1D and 3D domains: lumped circuits, vascular network models, tetrahedral finite elements and body-fitted isogeometric analysis, with multispecies transport, moving domains and checkpoint/restart. CPU solvers run on MPI and PETSc; the IGA backend also runs on a single CUDA GPU.</p>
             <p>Against the HexSim CPU workflow on three branching-neuron geometries, the optimized CPU path is <strong>1.4–2.7× faster</strong> and the V100 backend <strong>1.8–9.1× faster</strong> end to end. On the GPU the gain comes from assembly: <strong>5.5–24.5× faster</strong> than 8–16 MPI ranks, at roughly half the peak memory.</p>
