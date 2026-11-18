@@ -61,7 +61,7 @@ Built a validated C++/CUDA simulation pipeline for flow and transport in complex
 
 *Runtimes are case- and hardware-specific; see the benchmark documentation for validation and scope.*
 
-[Repository](https://github.com/EngineerEricXie/TubularFlowIGA) · [Benchmark details](https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/BENCHMARKS.md)
+[Repository](https://github.com/EngineerEricXie/TubularFlowIGA) · [Benchmark details](https://github.com/EngineerEricXie/TubularFlowIGA/blob/main/docs/validation/BENCHMARKS.md)
 
 <span class='anchor' id='publications'></span>
 
